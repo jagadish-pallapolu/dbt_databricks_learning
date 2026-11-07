@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Customer dimensional model with Lifetime Value (LTV) and customer tier segmentation"
+    columns:
+      - name: customer_id
+        description: "Primary key for customer dimension"
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_tier
+        description: "Customer classification: VIP, Regular, or Prospect"
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['VIP', 'Regular', 'Prospect']
+
+  - name: dim_products
+    description: "Product dimension with catalog attributes and cumulative sales volume"
+    columns:
+      - name: product_id
+        description: "Primary key for product dimension"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: fct_orders
+    description: "Core sales transactions fact table"
+    columns:
+      - name: order_id
+        description: "Order identifier"
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Customer foreign key referencing dim_customers"
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_customers')
+                field: customer_id
+      - name: product_id
+        description: "Product foreign key referencing dim_products"
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_products')
+                field: product_id
+
+  - name: mart_customer_daily_summary
+    description: "Aggregated daily business metrics sliced by country and tier"

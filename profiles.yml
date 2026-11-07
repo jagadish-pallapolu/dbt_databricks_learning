@@ -1,0 +1,60 @@
+# profiles.yml - Multi-warehouse configuration
+# Default: 'duckdb' (100% free, runs locally & offline, no cloud credentials needed)
+# When migrating, change `target: duckdb` to `target: databricks`, `target: snowflake`, or `target: bigquery`
+
+learning_dwh:
+  target: duckdb
+  outputs:
+    # -------------------------------------------------------------
+    # 1. LOCAL OFFLINE WAREHOUSE (Default)
+    # Uses DuckDB - columnar OLAP, runs embedded locally
+    # -------------------------------------------------------------
+    duckdb:
+      type: duckdb
+      path: 'dev.duckdb'
+      threads: 4
+      config_options:
+        storage_compatibility_version: 'v1.1.0'
+
+    # -------------------------------------------------------------
+    # 2. DATABRICKS (Lakehouse with Unity Catalog / Delta Lake)
+    # Requires: pip install dbt-databricks
+    # -------------------------------------------------------------
+    databricks:
+      type: databricks
+      schema: default
+      host: "{{ env_var('DATABRICKS_HOST', 'dbc-xxxxxx.cloud.databricks.com') }}"
+      http_path: "{{ env_var('DATABRICKS_HTTP_PATH', '/sql/1.0/warehouses/xxxxxx') }}"
+      token: "{{ env_var('DATABRICKS_TOKEN', 'dapi_placeholder') }}"
+      # In Databricks Unity Catalog, models map to <catalog>.<schema>.<table/view>
+      catalog: "{{ env_var('DATABRICKS_CATALOG', 'main') }}"
+      threads: 4
+
+    # -------------------------------------------------------------
+    # 3. SNOWFLAKE
+    # Requires: pip install dbt-snowflake
+    # -------------------------------------------------------------
+    snowflake:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT', 'xy12345.us-east-1') }}"
+      user: "{{ env_var('SNOWFLAKE_USER', 'my_user') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD', 'my_password') }}"
+      role: "{{ env_var('SNOWFLAKE_ROLE', 'TRANSFORMER') }}"
+      database: "{{ env_var('SNOWFLAKE_DATABASE', 'ANALYTICS_DEV') }}"
+      warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE', 'COMPUTE_WH') }}"
+      schema: "{{ env_var('SNOWFLAKE_SCHEMA', 'PUBLIC') }}"
+      threads: 4
+
+    # -------------------------------------------------------------
+    # 4. GOOGLE BIGQUERY
+    # Requires: pip install dbt-bigquery
+    # -------------------------------------------------------------
+    bigquery:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('GCP_PROJECT_ID', 'my-gcp-project') }}"
+      dataset: "{{ env_var('BQ_DATASET', 'analytics_dev') }}"
+      threads: 4
+      timeout_seconds: 300
+      location: US
+

@@ -1,0 +1,11 @@
+
+    
+    
+    truncate table "dev"."raw_seed"."raw_products";
+    -- dbt seed --
+    
+          COPY "dev"."raw_seed"."raw_products" FROM '/Users/jagadish/Documents/antigravity/dbt_databricks_learning/seeds/raw_products.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

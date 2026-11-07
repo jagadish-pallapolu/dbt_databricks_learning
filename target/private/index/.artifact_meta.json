@@ -1,0 +1,25 @@
+{
+  "target_dir": "/Users/jagadish/Documents/antigravity/dbt_databricks_learning/target",
+  "fingerprints": {
+    "run_results.json": {
+      "size": 339,
+      "modified_secs": 1794048901
+    },
+    "semantic_manifest.json": {
+      "size": 234,
+      "modified_secs": 1794048901
+    },
+    "catalog.json": {
+      "size": 21753,
+      "modified_secs": 1794048315
+    },
+    "manifest.json": {
+      "size": 611712,
+      "modified_secs": 1794048901
+    }
+  },
+  "write_source": "DirectWrite",
+  "context_dir": null,
+  "context_fingerprints": {},
+  "source_identity": null
+}

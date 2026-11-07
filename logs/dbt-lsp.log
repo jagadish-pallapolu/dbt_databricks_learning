@@ -1,0 +1,1876 @@
+==================== 2026-11-07T10:54:43.192270Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-11-07T10:54:43.192851Z | ca235555-e713-46e0-9eba-f9c1d6f9aa81 ====================
+10:54:43.192924 [info ]: Starting dbt LSP server
+10:54:43.193001 [info ]: Connecting to LSP client on port 8000
+10:54:43.193247 [info ]: Successfully connected to LSP client
+10:54:43.193272 [info ]: Creating LSP service...
+10:54:43.194404 [info ]: Creating LSP server...
+10:54:43.194410 [info ]: Starting LSP server...
+10:54:43.228806 [info ]: Loading profiles.yml
+==================== 2026-11-07T10:54:43.243035Z | 6b41de2c-3931-4302-8e08-74b270e23fbf ====================
+10:54:43.243202 [info ]: Started loading project
+10:54:43.243766 [info ]: Loading profiles.yml
+10:54:43.249208 [debug]:    Started loading packages
+10:54:43.250051 [debug]:     Loaded [  0.00s] packages
+10:54:43.250717 [info ]: Finished loading project [  0.01s]
+10:54:43.251086 [info ]: Started parsing (16 nodes)
+10:54:43.265572 [debug]:    Started building model nodes
+10:54:43.265572 [debug]:    Started building model nodes
+10:54:43.265615 [debug]:   Finished [  0.00s] building model nodes
+10:54:43.265617 [debug]:   Finished [  0.00s] building model nodes
+10:54:43.265800 [debug]: Finished parsing models/bronze/bronze_sources.yml [  0.00s]
+10:54:43.266084 [debug]: Finished parsing models/gold/gold_models.yml [  0.00s]
+10:54:43.266156 [debug]:    Started resolving data tests
+10:54:43.266156 [debug]:    Started resolving data tests
+10:54:43.266203 [debug]:   Finished [  0.00s] resolving data tests
+10:54:43.266203 [debug]:   Finished [  0.00s] resolving data tests
+10:54:43.266549 [debug]: Finished parsing models/silver/silver_models.yml [  0.00s]
+10:54:43.270706 [debug]: Finished parsing snapshots/snapshot_customers.sql [  0.00s]
+10:54:43.272357 [debug]: Finished parsing models/bronze/bronze_customers.sql [  0.00s]
+10:54:43.272979 [debug]: Finished parsing models/bronze/bronze_orders.sql [  0.00s]
+10:54:43.273584 [debug]: Finished parsing models/bronze/bronze_products.sql [  0.00s]
+10:54:43.273845 [debug]: Finished parsing models/gold/dim_customers.sql [  0.00s]
+10:54:43.274151 [debug]: Finished parsing models/gold/dim_products.sql [  0.00s]
+10:54:43.274324 [debug]: Finished parsing models/gold/fct_orders.sql [  0.00s]
+10:54:43.274593 [debug]: Finished parsing models/gold/mart_customer_daily_summary.sql [  0.00s]
+10:54:43.274832 [debug]: Finished parsing models/silver/silver_customers.sql [  0.00s]
+10:54:43.275338 [debug]: Finished parsing models/silver/silver_orders.sql [  0.00s]
+10:54:43.275654 [debug]:    Started building model nodes
+10:54:43.277069 [debug]:   Finished [  0.00s] building model nodes
+10:54:43.277139 [debug]: Finished parsing models/silver/silver_products.sql [  0.00s]
+10:54:43.277599 [debug]:    Started resolving data tests
+10:54:43.277630 [debug]: Finished parsing analyses/sample_query.sql [  0.00s]
+10:54:43.277948 [debug]: Finished parsing tests/assert_order_total_is_positive.sql [  0.00s]
+10:54:43.277952 [debug]:   Finished [  0.00s] resolving data tests
+10:54:43.278169 [debug]:    Started typechecking macros
+10:54:43.328291 [debug]:   Finished [  0.05s] typechecking macros
+10:54:43.329063 [info ]: Finished parsing [  0.08s] (16 nodes, 0 skipped, 0 errors)
+10:54:43.329419 [info ]: Cached model count updated: 10 models (estimate)
+10:54:43.329427 [info ]: Cached model count updated: 10 models (accurate)
+10:54:43.329563 [info ]: Started scheduling
+10:54:43.329903 [info ]: Finished scheduling [  0.00s]
+10:54:43.329912 [debug]: Compilation - 11 nodes selected: {"analysis.dbt_databricks_learning.sample_query", "model.dbt_databricks_learning.bronze_customers", "model.dbt_databricks_learning.bronze_orders", "model.dbt_databricks_learning.bronze_products", "model.dbt_databricks_learning.dim_customers", "model.dbt_databricks_learning.silver_customers", "model.dbt_databricks_learning.silver_orders", "model.dbt_databricks_learning.silver_products", "seed.dbt_databricks_learning.raw_customers", "seed.dbt_databricks_learning.raw_orders", "seed.dbt_databricks_learning.raw_products"}
+10:54:43.329960 [info ]: Started scheduling
+10:54:43.330010 [info ]: Finished scheduling [  0.00s]
+10:54:43.331780 [info ]: Started building task graph
+10:54:43.332009 [info ]: Finished building task graph [  0.00s]
+10:54:43.361331 [info ]: Started rendering (11 nodes)
+10:54:43.361362 [info ]: Started analysis main.sample_query
+10:54:43.361377 [debug]: Started rendering analysis main.sample_query
+10:54:43.361410 [info ]: Started model gold.dim_customers
+10:54:43.361414 [debug]: Started rendering model gold.dim_customers
+10:54:43.361419 [info ]: Started model silver.silver_orders
+10:54:43.361422 [debug]: Started rendering model silver.silver_orders
+10:54:43.361425 [info ]: Started model silver.silver_products
+10:54:43.361427 [debug]: Started rendering model silver.silver_products
+10:54:43.361432 [info ]: Started model silver.silver_customers
+10:54:43.361435 [debug]: Started rendering model silver.silver_customers
+10:54:43.361441 [info ]: Started model bronze.bronze_products
+10:54:43.361443 [debug]: Started rendering model bronze.bronze_products
+10:54:43.361447 [info ]: Started seed raw_seed.raw_products
+10:54:43.361450 [debug]: Started rendering seed raw_seed.raw_products
+10:54:43.361453 [info ]: Started model bronze.bronze_orders
+10:54:43.361456 [debug]: Started rendering model bronze.bronze_orders
+10:54:43.361460 [info ]: Started seed raw_seed.raw_orders
+10:54:43.361463 [debug]: Started rendering seed raw_seed.raw_orders
+10:54:43.361466 [info ]: Started model bronze.bronze_customers
+10:54:43.361468 [debug]: Started rendering model bronze.bronze_customers
+10:54:43.361496 [info ]: Started seed raw_seed.raw_customers
+10:54:43.361499 [debug]: Started rendering seed raw_seed.raw_customers
+10:54:43.361652 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_products [success]
+10:54:43.361662 [info ]:  Succeeded seed  raw_seed.raw_products (table) [7 of 11 in 0.00s]
+10:54:43.361672 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_customers [success]
+10:54:43.361675 [info ]:  Succeeded seed  raw_seed.raw_customers (table) [11 of 11 in 0.00s]
+10:54:43.361680 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_orders [success]
+10:54:43.361682 [info ]:  Succeeded seed  raw_seed.raw_orders (table) [9 of 11 in 0.00s]
+10:54:43.362514 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_orders at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_orders.sql
+10:54:43.362543 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_customers at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_customers.sql
+10:54:43.362546 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_customers at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_customers.sql
+10:54:43.362624 [debug]: Finished rendering [  0.00s] model silver.silver_orders [success]
+10:54:43.362702 [info ]: Started analyzing (7 nodes)
+10:54:43.362703 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_customers at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_customers.sql
+10:54:43.362726 [debug]: Started analyzing model silver.silver_orders
+10:54:43.362771 [debug]: Finished rendering [  0.00s] model gold.dim_customers [success]
+10:54:43.362778 [debug]: Started analyzing model gold.dim_customers
+10:54:43.362785 [debug]: Finished rendering [  0.00s] model bronze.bronze_customers [success]
+10:54:43.362789 [debug]: Started analyzing model bronze.bronze_customers
+10:54:43.362837 [debug]: Finished rendering [  0.00s] model silver.silver_customers [success]
+10:54:43.362859 [debug]: Started analyzing model silver.silver_customers
+10:54:43.363096 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_orders at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_orders.sql
+10:54:43.363149 [debug]: Finished rendering [  0.00s] model bronze.bronze_orders [success]
+10:54:43.363172 [debug]: Started analyzing model bronze.bronze_orders
+10:54:43.363373 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_products at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_products.sql
+10:54:43.363404 [debug]: Compiled SQL for node analysis.dbt_databricks_learning.sample_query at target/.lsp/compiled/dbt_databricks_learning/analyses/sample_query.sql
+10:54:43.363416 [debug]: Finished rendering [  0.00s] model bronze.bronze_products [success]
+10:54:43.363427 [debug]: Started analyzing model bronze.bronze_products
+10:54:43.363489 [debug]: Finished rendering [  0.00s] analysis main.sample_query [success]
+10:54:43.363494 [info ]:  Succeeded analysis main.sample_query (analysis) [1 of 11 in 0.00s]
+10:54:43.363564 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_products at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_products.sql
+10:54:43.363605 [debug]: Finished rendering [  0.00s] model silver.silver_products [success]
+10:54:43.363611 [info ]: Finished rendering [  0.00s] (11 nodes, 0 skipped, 0 errors)
+10:54:43.363635 [debug]: Started analyzing model silver.silver_products
+10:54:43.367006 [debug]: Finished analyzing [  0.00s] model bronze.bronze_products [success]
+10:54:43.367014 [info ]:  Succeeded model bronze.bronze_products (view) [6 of 11 in 0.00s]
+10:54:43.367023 [debug]: Finished analyzing [  0.00s] model bronze.bronze_customers [success]
+10:54:43.367025 [info ]:  Succeeded model bronze.bronze_customers (view) [10 of 11 in 0.01s]
+10:54:43.369280 [debug]: Finished analyzing [  0.01s] model bronze.bronze_orders [success]
+10:54:43.369288 [info ]:  Succeeded model bronze.bronze_orders (view) [8 of 11 in 0.01s]
+10:54:43.371825 [debug]: Finished analyzing [  0.01s] model silver.silver_customers [success]
+10:54:43.371831 [info ]:  Succeeded model silver.silver_customers (table) [5 of 11 in 0.01s]
+10:54:43.372374 [debug]: Finished analyzing [  0.01s] model silver.silver_products [success]
+10:54:43.372379 [info ]:  Succeeded model silver.silver_products (table) [4 of 11 in 0.01s]
+10:54:43.373506 [debug]: Finished analyzing [  0.01s] model silver.silver_orders [success]
+10:54:43.373512 [info ]:  Succeeded model silver.silver_orders (table) [3 of 11 in 0.01s]
+10:54:43.374513 [debug]: Finished analyzing [  0.01s] model gold.dim_customers [success]
+10:54:43.374519 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+10:54:43.374522 [info ]:  Succeeded model gold.dim_customers (table) [2 of 11 in 0.01s]
+10:54:43.376943 [info ]: Started scheduling
+10:54:43.376973 [info ]: Finished scheduling [  0.00s]
+10:54:43.377045 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [134ms]
+Processed: 7 models | 3 seeds | 1 analysis
+Summary: 11 total | 11 success
+10:54:43.377101 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-11-07T10:54:44.558088Z | a787c463-ad7b-458f-bd2d-043d5b1bd822 ====================
+10:54:44.558126 [info ]: Started loading project
+10:54:44.558384 [info ]: Loading profiles.yml
+10:54:44.560514 [info ]: Finished loading project [  0.00s]
+10:54:44.570446 [info ]: Cached model count updated: 10 models (estimate)
+10:54:44.570458 [info ]: Cached model count updated: 10 models (accurate)
+10:54:44.570483 [info ]: Started scheduling
+10:54:44.570580 [info ]: Finished scheduling [  0.00s]
+10:54:44.570591 [debug]: Compilation - 15 nodes selected: {"analysis.dbt_databricks_learning.sample_query", "model.dbt_databricks_learning.bronze_customers", "model.dbt_databricks_learning.bronze_orders", "model.dbt_databricks_learning.bronze_products", "model.dbt_databricks_learning.dim_customers", "model.dbt_databricks_learning.dim_products", "model.dbt_databricks_learning.fct_orders", "model.dbt_databricks_learning.mart_customer_daily_summary", "model.dbt_databricks_learning.silver_customers", "model.dbt_databricks_learning.silver_orders", "model.dbt_databricks_learning.silver_products", "seed.dbt_databricks_learning.raw_customers", "seed.dbt_databricks_learning.raw_orders", "seed.dbt_databricks_learning.raw_products", "snapshot.dbt_databricks_learning.snapshot_customers"}
+10:54:44.571427 [info ]: Started building task graph
+10:54:44.571509 [info ]: Finished building task graph [  0.00s]
+10:54:44.595633 [info ]: Started rendering (15 nodes)
+10:54:44.595647 [info ]: Started snapshot snapshots.snapshot_customers
+10:54:44.595653 [debug]: Started rendering snapshot snapshots.snapshot_customers
+10:54:44.595667 [info ]: Started model gold.mart_customer_daily_summary
+10:54:44.595670 [debug]: Started rendering model gold.mart_customer_daily_summary
+10:54:44.595676 [info ]: Started model gold.fct_orders
+10:54:44.595679 [debug]: Started rendering model gold.fct_orders
+10:54:44.595683 [info ]: Started model gold.dim_products
+10:54:44.595687 [debug]: Started rendering model gold.dim_products
+10:54:44.595693 [info ]: Started analysis main.sample_query
+10:54:44.595696 [debug]: Started rendering analysis main.sample_query
+10:54:44.595700 [info ]: Started model gold.dim_customers
+10:54:44.595702 [debug]: Started rendering model gold.dim_customers
+10:54:44.595707 [info ]: Started model silver.silver_orders
+10:54:44.595710 [debug]: Started rendering model silver.silver_orders
+10:54:44.595713 [info ]: Started model silver.silver_products
+10:54:44.595716 [debug]: Started rendering model silver.silver_products
+10:54:44.595722 [info ]: Started model silver.silver_customers
+10:54:44.595725 [debug]: Started rendering model silver.silver_customers
+10:54:44.595730 [info ]: Started model bronze.bronze_products
+10:54:44.595734 [debug]: Started rendering model bronze.bronze_products
+10:54:44.595740 [info ]: Started seed raw_seed.raw_products
+10:54:44.595743 [debug]: Started rendering seed raw_seed.raw_products
+10:54:44.595749 [info ]: Started model bronze.bronze_orders
+10:54:44.595752 [debug]: Started rendering model bronze.bronze_orders
+10:54:44.595757 [info ]: Started seed raw_seed.raw_orders
+10:54:44.595760 [debug]: Started rendering seed raw_seed.raw_orders
+10:54:44.595766 [info ]: Started model bronze.bronze_customers
+10:54:44.595771 [debug]: Started rendering model bronze.bronze_customers
+10:54:44.595784 [info ]: Started seed raw_seed.raw_customers
+10:54:44.595791 [debug]: Started rendering seed raw_seed.raw_customers
+10:54:44.595807 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_products [success]
+10:54:44.595815 [info ]:  Succeeded seed  raw_seed.raw_products (table) [11 of 15 in 0.00s]
+10:54:44.595825 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_orders [success]
+10:54:44.595828 [info ]:  Succeeded seed  raw_seed.raw_orders (table) [13 of 15 in 0.00s]
+10:54:44.595840 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_customers [success]
+10:54:44.595842 [info ]:  Succeeded seed  raw_seed.raw_customers (table) [15 of 15 in 0.00s]
+10:54:44.596286 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_products at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_products.sql
+10:54:44.596301 [debug]: Compiled SQL for node model.dbt_databricks_learning.mart_customer_daily_summary at target/.lsp/compiled/dbt_databricks_learning/models/gold/mart_customer_daily_summary.sql
+10:54:44.596304 [debug]: Compiled SQL for node model.dbt_databricks_learning.fct_orders at target/.lsp/compiled/dbt_databricks_learning/models/gold/fct_orders.sql
+10:54:44.596346 [debug]: Finished rendering [  0.00s] model gold.dim_products [success]
+10:54:44.596371 [info ]: Started analyzing (11 nodes)
+10:54:44.596374 [debug]: Compiled SQL for node snapshot.dbt_databricks_learning.snapshot_customers at target/.lsp/compiled/dbt_databricks_learning/snapshots/snapshot_customers.sql/snapshot_customers.sql
+10:54:44.596378 [debug]: Started analyzing model gold.dim_products
+10:54:44.596393 [debug]: Finished rendering [  0.00s] model gold.mart_customer_daily_summary [success]
+10:54:44.596395 [debug]: Compiled SQL for node analysis.dbt_databricks_learning.sample_query at target/.lsp/compiled/dbt_databricks_learning/analyses/sample_query.sql
+10:54:44.596405 [debug]: Started analyzing model gold.mart_customer_daily_summary
+10:54:44.596417 [debug]: Finished rendering [  0.00s] model gold.fct_orders [success]
+10:54:44.596418 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_products at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_products.sql
+10:54:44.596426 [debug]: Started analyzing model gold.fct_orders
+10:54:44.596452 [debug]: Finished rendering [  0.00s] snapshot snapshots.snapshot_customers [success]
+10:54:44.596471 [debug]: Started analyzing snapshot snapshots.snapshot_customers
+10:54:44.596467 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_customers at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_customers.sql
+10:54:44.596485 [debug]: Finished rendering [  0.00s] analysis main.sample_query [success]
+10:54:44.596486 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_customers at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_customers.sql
+10:54:44.596490 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_orders at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_orders.sql
+10:54:44.596495 [info ]:  Succeeded analysis main.sample_query (analysis) [5 of 15 in 0.00s]
+10:54:44.596500 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_products at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_products.sql
+10:54:44.596510 [debug]: Finished rendering [  0.00s] model silver.silver_products [success]
+10:54:44.596520 [debug]: Started analyzing model silver.silver_products
+10:54:44.596531 [debug]: Finished rendering [  0.00s] model gold.dim_customers [success]
+10:54:44.596538 [debug]: Started analyzing model gold.dim_customers
+10:54:44.596547 [debug]: Finished rendering [  0.00s] model silver.silver_customers [success]
+10:54:44.596555 [debug]: Started analyzing model silver.silver_customers
+10:54:44.596564 [debug]: Finished rendering [  0.00s] model silver.silver_orders [success]
+10:54:44.596565 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_customers at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_customers.sql
+10:54:44.596572 [debug]: Started analyzing model silver.silver_orders
+10:54:44.596582 [debug]: Finished rendering [  0.00s] model bronze.bronze_products [success]
+10:54:44.596589 [debug]: Started analyzing model bronze.bronze_products
+10:54:44.596647 [debug]: Finished rendering [  0.00s] model bronze.bronze_customers [success]
+10:54:44.596665 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_orders at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_orders.sql
+10:54:44.596670 [debug]: Started analyzing model bronze.bronze_customers
+10:54:44.596685 [debug]: Finished analyzing [  0.00s] model gold.fct_orders [success]
+10:54:44.596691 [info ]:  Succeeded model gold.fct_orders (table) [3 of 15 in 0.00s]
+10:54:44.596704 [debug]: Finished analyzing [  0.00s] snapshot snapshots.snapshot_customers [success]
+10:54:44.596710 [info ]:  Succeeded snapshot snapshots.snapshot_customers (snapshot) [1 of 15 in 0.00s]
+10:54:44.596722 [debug]: Finished rendering [  0.00s] model bronze.bronze_orders [success]
+10:54:44.596728 [info ]: Finished rendering [  0.00s] (15 nodes, 0 skipped, 0 errors)
+10:54:44.596735 [debug]: Started analyzing model bronze.bronze_orders
+10:54:44.596790 [debug]: Finished analyzing [  0.00s] model bronze.bronze_products [success]
+10:54:44.596803 [info ]:  Succeeded model bronze.bronze_products (view) [10 of 15 in 0.00s]
+10:54:44.596835 [debug]: Finished analyzing [  0.00s] model bronze.bronze_customers [success]
+10:54:44.596878 [info ]:  Succeeded model bronze.bronze_customers (view) [14 of 15 in 0.00s]
+10:54:44.596892 [debug]: Finished analyzing [  0.00s] model silver.silver_products [success]
+10:54:44.596898 [info ]:  Succeeded model silver.silver_products (table) [8 of 15 in 0.00s]
+10:54:44.597166 [debug]: Finished analyzing [  0.00s] model silver.silver_orders [success]
+10:54:44.597173 [info ]:  Succeeded model silver.silver_orders (table) [7 of 15 in 0.00s]
+10:54:44.597178 [debug]: Finished analyzing [  0.00s] model gold.dim_products [success]
+10:54:44.597182 [info ]:  Succeeded model gold.dim_products (table) [4 of 15 in 0.00s]
+10:54:44.597248 [debug]: Finished analyzing [  0.00s] model bronze.bronze_orders [success]
+10:54:44.597255 [info ]:  Succeeded model bronze.bronze_orders (view) [12 of 15 in 0.00s]
+10:54:44.597467 [debug]: Finished analyzing [  0.00s] model gold.dim_customers [success]
+10:54:44.597472 [info ]:  Succeeded model gold.dim_customers (table) [6 of 15 in 0.00s]
+10:54:44.597492 [debug]: Finished analyzing [  0.00s] model silver.silver_customers [success]
+10:54:44.597497 [info ]:  Succeeded model silver.silver_customers (table) [9 of 15 in 0.00s]
+10:54:44.601239 [debug]: Finished analyzing [  0.00s] model gold.mart_customer_daily_summary [success]
+10:54:44.601246 [info ]: Finished analyzing [  0.00s] (11 nodes, 0 skipped, 0 errors)
+10:54:44.601249 [info ]:  Succeeded model gold.mart_customer_daily_summary (table) [2 of 15 in 0.00s]
+10:54:44.602536 [info ]: Started scheduling
+10:54:44.602563 [info ]: Finished scheduling [  0.00s]
+10:54:44.602597 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [44ms]
+Processed: 10 models | 1 snapshot | 3 seeds | 1 analysis
+Summary: 15 total | 15 success
+10:54:44.602650 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-11-07T10:56:28.152467Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-11-07T10:56:28.152544Z | 513b0afa-d4a5-4716-ba3c-6e2392d0e03e ====================
+10:56:28.152554 [info ]: Starting dbt LSP server
+10:56:28.152566 [info ]: Connecting to LSP client on port 8000
+10:56:28.152729 [info ]: Successfully connected to LSP client
+10:56:28.152739 [info ]: Creating LSP service...
+10:56:28.153423 [info ]: Creating LSP server...
+10:56:28.153431 [info ]: Starting LSP server...
+10:56:28.170142 [info ]: Loading profiles.yml
+==================== 2026-11-07T10:56:28.177148Z | 1bdff5db-44a5-41e5-8a5c-6f0445a91e41 ====================
+10:56:28.177181 [info ]: Started loading project
+10:56:28.177372 [info ]: Loading profiles.yml
+10:56:28.181187 [debug]:    Started loading packages
+10:56:28.181961 [debug]:     Loaded [  0.00s] packages
+10:56:28.182327 [info ]: Finished loading project [  0.01s]
+10:56:28.182463 [info ]: Started parsing (16 nodes)
+10:56:28.194242 [debug]:    Started building model nodes
+10:56:28.194249 [debug]:    Started building model nodes
+10:56:28.194253 [debug]: Finished parsing models/bronze/bronze_sources.yml [  0.00s]
+10:56:28.194253 [debug]:   Finished [  0.00s] building model nodes
+10:56:28.194254 [debug]:   Finished [  0.00s] building model nodes
+10:56:28.194447 [debug]: Finished parsing models/gold/gold_models.yml [  0.00s]
+10:56:28.194619 [debug]: Finished parsing models/silver/silver_models.yml [  0.00s]
+10:56:28.194665 [debug]:    Started resolving data tests
+10:56:28.194665 [debug]:    Started resolving data tests
+10:56:28.194685 [debug]:   Finished [  0.00s] resolving data tests
+10:56:28.194685 [debug]:   Finished [  0.00s] resolving data tests
+10:56:28.197324 [debug]: Finished parsing snapshots/snapshot_customers.sql [  0.00s]
+10:56:28.198290 [debug]: Finished parsing models/bronze/bronze_customers.sql [  0.00s]
+10:56:28.198526 [debug]: Finished parsing models/bronze/bronze_orders.sql [  0.00s]
+10:56:28.198753 [debug]: Finished parsing models/bronze/bronze_products.sql [  0.00s]
+10:56:28.199060 [debug]: Finished parsing models/gold/dim_customers.sql [  0.00s]
+10:56:28.199344 [debug]: Finished parsing models/gold/dim_products.sql [  0.00s]
+10:56:28.199522 [debug]: Finished parsing models/gold/fct_orders.sql [  0.00s]
+10:56:28.199744 [debug]: Finished parsing models/gold/mart_customer_daily_summary.sql [  0.00s]
+10:56:28.199964 [debug]: Finished parsing models/silver/silver_customers.sql [  0.00s]
+10:56:28.200246 [debug]: Finished parsing models/silver/silver_orders.sql [  0.00s]
+10:56:28.200447 [debug]:    Started building model nodes
+10:56:28.201689 [debug]:   Finished [  0.00s] building model nodes
+10:56:28.201719 [debug]: Finished parsing models/silver/silver_products.sql [  0.00s]
+10:56:28.202203 [debug]:    Started resolving data tests
+10:56:28.202223 [debug]: Finished parsing analyses/sample_query.sql [  0.00s]
+10:56:28.202504 [debug]: Finished parsing tests/assert_order_total_is_positive.sql [  0.00s]
+10:56:28.202508 [debug]:   Finished [  0.00s] resolving data tests
+10:56:28.202700 [debug]:    Started typechecking macros
+10:56:28.247912 [debug]:   Finished [  0.05s] typechecking macros
+10:56:28.248352 [info ]: Finished parsing [  0.07s] (16 nodes, 0 skipped, 0 errors)
+10:56:28.248528 [info ]: Cached model count updated: 10 models (estimate)
+10:56:28.248534 [info ]: Cached model count updated: 10 models (accurate)
+10:56:28.248565 [info ]: Started scheduling
+10:56:28.248663 [info ]: Finished scheduling [  0.00s]
+10:56:28.248669 [debug]: Compilation - 11 nodes selected: {"analysis.dbt_databricks_learning.sample_query", "model.dbt_databricks_learning.bronze_customers", "model.dbt_databricks_learning.bronze_orders", "model.dbt_databricks_learning.bronze_products", "model.dbt_databricks_learning.dim_customers", "model.dbt_databricks_learning.silver_customers", "model.dbt_databricks_learning.silver_orders", "model.dbt_databricks_learning.silver_products", "seed.dbt_databricks_learning.raw_customers", "seed.dbt_databricks_learning.raw_orders", "seed.dbt_databricks_learning.raw_products"}
+10:56:28.248688 [info ]: Started scheduling
+10:56:28.248737 [info ]: Finished scheduling [  0.00s]
+10:56:28.250106 [info ]: Started building task graph
+10:56:28.250164 [info ]: Finished building task graph [  0.00s]
+10:56:28.274624 [info ]: Started rendering (11 nodes)
+10:56:28.274638 [info ]: Started analysis main.sample_query
+10:56:28.274645 [debug]: Started rendering analysis main.sample_query
+10:56:28.274656 [info ]: Started model gold.dim_customers
+10:56:28.274661 [debug]: Started rendering model gold.dim_customers
+10:56:28.274665 [info ]: Started model silver.silver_orders
+10:56:28.274668 [debug]: Started rendering model silver.silver_orders
+10:56:28.274673 [info ]: Started model silver.silver_products
+10:56:28.274676 [debug]: Started rendering model silver.silver_products
+10:56:28.274681 [info ]: Started model silver.silver_customers
+10:56:28.274683 [debug]: Started rendering model silver.silver_customers
+10:56:28.274687 [info ]: Started model bronze.bronze_products
+10:56:28.274690 [debug]: Started rendering model bronze.bronze_products
+10:56:28.274694 [info ]: Started seed raw_seed.raw_products
+10:56:28.274696 [debug]: Started rendering seed raw_seed.raw_products
+10:56:28.274705 [info ]: Started model bronze.bronze_orders
+10:56:28.274709 [debug]: Started rendering model bronze.bronze_orders
+10:56:28.274715 [info ]: Started seed raw_seed.raw_orders
+10:56:28.274717 [debug]: Started rendering seed raw_seed.raw_orders
+10:56:28.274721 [info ]: Started model bronze.bronze_customers
+10:56:28.274723 [debug]: Started rendering model bronze.bronze_customers
+10:56:28.274731 [info ]: Started seed raw_seed.raw_customers
+10:56:28.274735 [debug]: Started rendering seed raw_seed.raw_customers
+10:56:28.274765 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_products [success]
+10:56:28.274772 [info ]:  Succeeded seed  raw_seed.raw_products (table) [7 of 11 in 0.00s]
+10:56:28.274783 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_customers [success]
+10:56:28.274786 [info ]:  Succeeded seed  raw_seed.raw_customers (table) [11 of 11 in 0.00s]
+10:56:28.274792 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_orders [success]
+10:56:28.274795 [info ]:  Succeeded seed  raw_seed.raw_orders (table) [9 of 11 in 0.00s]
+10:56:28.275022 [debug]: Compiled SQL for node analysis.dbt_databricks_learning.sample_query at target/.lsp/compiled/dbt_databricks_learning/analyses/sample_query.sql
+10:56:28.275086 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_customers at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_customers.sql
+10:56:28.275085 [debug]: Finished rendering [  0.00s] analysis main.sample_query [success]
+10:56:28.275100 [info ]:  Succeeded analysis main.sample_query (analysis) [1 of 11 in 0.00s]
+10:56:28.275125 [debug]: Finished rendering [  0.00s] model gold.dim_customers [success]
+10:56:28.275151 [info ]: Started analyzing (7 nodes)
+10:56:28.275150 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_orders at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_orders.sql
+10:56:28.275163 [debug]: Started analyzing model gold.dim_customers
+10:56:28.275245 [debug]: Finished rendering [  0.00s] model silver.silver_orders [success]
+10:56:28.275273 [debug]: Started analyzing model silver.silver_orders
+10:56:28.275309 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_products at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_products.sql
+10:56:28.275335 [debug]: Finished rendering [  0.00s] model bronze.bronze_products [success]
+10:56:28.275346 [debug]: Started analyzing model bronze.bronze_products
+10:56:28.275436 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_customers at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_customers.sql
+10:56:28.275434 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_products at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_products.sql
+10:56:28.275467 [debug]: Finished rendering [  0.00s] model silver.silver_customers [success]
+10:56:28.275477 [debug]: Started analyzing model silver.silver_customers
+10:56:28.275511 [debug]: Finished rendering [  0.00s] model silver.silver_products [success]
+10:56:28.275520 [debug]: Started analyzing model silver.silver_products
+10:56:28.275613 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_customers at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_customers.sql
+10:56:28.275652 [debug]: Finished rendering [  0.00s] model bronze.bronze_customers [success]
+10:56:28.275658 [debug]: Started analyzing model bronze.bronze_customers
+10:56:28.275781 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_orders at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_orders.sql
+10:56:28.275818 [debug]: Finished rendering [  0.00s] model bronze.bronze_orders [success]
+10:56:28.275822 [info ]: Finished rendering [  0.00s] (11 nodes, 0 skipped, 0 errors)
+10:56:28.275825 [debug]: Started analyzing model bronze.bronze_orders
+10:56:28.278363 [debug]: Finished analyzing [  0.00s] model bronze.bronze_customers [success]
+10:56:28.278370 [info ]:  Succeeded model bronze.bronze_customers (view) [10 of 11 in 0.00s]
+10:56:28.278401 [debug]: Finished analyzing [  0.00s] model bronze.bronze_products [success]
+10:56:28.278404 [info ]:  Succeeded model bronze.bronze_products (view) [6 of 11 in 0.00s]
+10:56:28.281035 [debug]: Finished analyzing [  0.01s] model bronze.bronze_orders [success]
+10:56:28.281045 [info ]:  Succeeded model bronze.bronze_orders (view) [8 of 11 in 0.01s]
+10:56:28.283133 [debug]: Finished analyzing [  0.01s] model silver.silver_customers [success]
+10:56:28.283139 [info ]:  Succeeded model silver.silver_customers (table) [5 of 11 in 0.01s]
+10:56:28.283159 [debug]: Finished analyzing [  0.01s] model silver.silver_products [success]
+10:56:28.283163 [info ]:  Succeeded model silver.silver_products (table) [4 of 11 in 0.01s]
+10:56:28.283955 [debug]: Finished analyzing [  0.01s] model silver.silver_orders [success]
+10:56:28.283960 [info ]:  Succeeded model silver.silver_orders (table) [3 of 11 in 0.01s]
+10:56:28.284852 [debug]: Finished analyzing [  0.01s] model gold.dim_customers [success]
+10:56:28.284857 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+10:56:28.284860 [info ]:  Succeeded model gold.dim_customers (table) [2 of 11 in 0.01s]
+10:56:28.286165 [info ]: Started scheduling
+10:56:28.286190 [info ]: Finished scheduling [  0.00s]
+10:56:28.286243 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [109ms]
+Processed: 7 models | 3 seeds | 1 analysis
+Summary: 11 total | 11 success
+10:56:28.286281 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-11-07T10:56:29.474824Z | ae39bb39-47fe-42bb-a048-15055f548b1d ====================
+10:56:29.474897 [info ]: Started loading project
+10:56:29.475504 [info ]: Loading profiles.yml
+10:56:29.479250 [info ]: Finished loading project [  0.00s]
+10:56:29.493163 [info ]: Cached model count updated: 10 models (estimate)
+10:56:29.493185 [info ]: Cached model count updated: 10 models (accurate)
+10:56:29.493229 [info ]: Started scheduling
+10:56:29.493368 [info ]: Finished scheduling [  0.00s]
+10:56:29.493383 [debug]: Compilation - 15 nodes selected: {"analysis.dbt_databricks_learning.sample_query", "model.dbt_databricks_learning.bronze_customers", "model.dbt_databricks_learning.bronze_orders", "model.dbt_databricks_learning.bronze_products", "model.dbt_databricks_learning.dim_customers", "model.dbt_databricks_learning.dim_products", "model.dbt_databricks_learning.fct_orders", "model.dbt_databricks_learning.mart_customer_daily_summary", "model.dbt_databricks_learning.silver_customers", "model.dbt_databricks_learning.silver_orders", "model.dbt_databricks_learning.silver_products", "seed.dbt_databricks_learning.raw_customers", "seed.dbt_databricks_learning.raw_orders", "seed.dbt_databricks_learning.raw_products", "snapshot.dbt_databricks_learning.snapshot_customers"}
+10:56:29.494662 [info ]: Started building task graph
+10:56:29.494770 [info ]: Finished building task graph [  0.00s]
+10:56:29.522428 [info ]: Started rendering (15 nodes)
+10:56:29.522445 [info ]: Started snapshot snapshots.snapshot_customers
+10:56:29.522451 [debug]: Started rendering snapshot snapshots.snapshot_customers
+10:56:29.522463 [info ]: Started model gold.mart_customer_daily_summary
+10:56:29.522466 [debug]: Started rendering model gold.mart_customer_daily_summary
+10:56:29.522472 [info ]: Started model gold.fct_orders
+10:56:29.522475 [debug]: Started rendering model gold.fct_orders
+10:56:29.522479 [info ]: Started model gold.dim_products
+10:56:29.522482 [debug]: Started rendering model gold.dim_products
+10:56:29.522487 [info ]: Started analysis main.sample_query
+10:56:29.522489 [debug]: Started rendering analysis main.sample_query
+10:56:29.522495 [info ]: Started model gold.dim_customers
+10:56:29.522497 [debug]: Started rendering model gold.dim_customers
+10:56:29.522501 [info ]: Started model silver.silver_orders
+10:56:29.522505 [debug]: Started rendering model silver.silver_orders
+10:56:29.522510 [info ]: Started model silver.silver_products
+10:56:29.522513 [debug]: Started rendering model silver.silver_products
+10:56:29.522518 [info ]: Started model silver.silver_customers
+10:56:29.522521 [debug]: Started rendering model silver.silver_customers
+10:56:29.522526 [info ]: Started model bronze.bronze_products
+10:56:29.522529 [debug]: Started rendering model bronze.bronze_products
+10:56:29.522533 [info ]: Started seed raw_seed.raw_products
+10:56:29.522537 [debug]: Started rendering seed raw_seed.raw_products
+10:56:29.522541 [info ]: Started model bronze.bronze_orders
+10:56:29.522543 [debug]: Started rendering model bronze.bronze_orders
+10:56:29.522548 [info ]: Started seed raw_seed.raw_orders
+10:56:29.522551 [debug]: Started rendering seed raw_seed.raw_orders
+10:56:29.522556 [info ]: Started model bronze.bronze_customers
+10:56:29.522562 [debug]: Started rendering model bronze.bronze_customers
+10:56:29.522568 [info ]: Started seed raw_seed.raw_customers
+10:56:29.522576 [debug]: Started rendering seed raw_seed.raw_customers
+10:56:29.522588 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_products [success]
+10:56:29.522597 [info ]:  Succeeded seed  raw_seed.raw_products (table) [11 of 15 in 0.00s]
+10:56:29.522609 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_orders [success]
+10:56:29.522614 [info ]:  Succeeded seed  raw_seed.raw_orders (table) [13 of 15 in 0.00s]
+10:56:29.522628 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_customers [success]
+10:56:29.522631 [info ]:  Succeeded seed  raw_seed.raw_customers (table) [15 of 15 in 0.00s]
+10:56:29.523063 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_products at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_products.sql
+10:56:29.523065 [debug]: Compiled SQL for node model.dbt_databricks_learning.fct_orders at target/.lsp/compiled/dbt_databricks_learning/models/gold/fct_orders.sql
+10:56:29.523122 [debug]: Finished rendering [  0.00s] model gold.dim_products [success]
+10:56:29.523135 [info ]: Started analyzing (11 nodes)
+10:56:29.523148 [debug]: Started analyzing model gold.dim_products
+10:56:29.523159 [debug]: Finished rendering [  0.00s] model gold.fct_orders [success]
+10:56:29.523164 [debug]: Started analyzing model gold.fct_orders
+10:56:29.523166 [debug]: Compiled SQL for node analysis.dbt_databricks_learning.sample_query at target/.lsp/compiled/dbt_databricks_learning/analyses/sample_query.sql
+10:56:29.523162 [debug]: Compiled SQL for node model.dbt_databricks_learning.mart_customer_daily_summary at target/.lsp/compiled/dbt_databricks_learning/models/gold/mart_customer_daily_summary.sql
+10:56:29.523170 [debug]: Compiled SQL for node snapshot.dbt_databricks_learning.snapshot_customers at target/.lsp/compiled/dbt_databricks_learning/snapshots/snapshot_customers.sql/snapshot_customers.sql
+10:56:29.523184 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_customers at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_customers.sql
+10:56:29.523204 [debug]: Finished rendering [  0.00s] analysis main.sample_query [success]
+10:56:29.523216 [info ]:  Succeeded analysis main.sample_query (analysis) [5 of 15 in 0.00s]
+10:56:29.523236 [debug]: Finished rendering [  0.00s] model silver.silver_customers [success]
+10:56:29.523251 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_customers at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_customers.sql
+10:56:29.523251 [debug]: Started analyzing model silver.silver_customers
+10:56:29.523263 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_orders at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_orders.sql
+10:56:29.523265 [debug]: Finished rendering [  0.00s] snapshot snapshots.snapshot_customers [success]
+10:56:29.523281 [debug]: Started analyzing snapshot snapshots.snapshot_customers
+10:56:29.523283 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_products at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_products.sql
+10:56:29.523292 [debug]: Finished rendering [  0.00s] model gold.mart_customer_daily_summary [success]
+10:56:29.523300 [debug]: Started analyzing model gold.mart_customer_daily_summary
+10:56:29.523312 [debug]: Finished rendering [  0.00s] model gold.dim_customers [success]
+10:56:29.523320 [debug]: Started analyzing model gold.dim_customers
+10:56:29.523331 [debug]: Finished rendering [  0.00s] model silver.silver_orders [success]
+10:56:29.523338 [debug]: Started analyzing model silver.silver_orders
+10:56:29.523349 [debug]: Finished rendering [  0.00s] model silver.silver_products [success]
+10:56:29.523357 [debug]: Started analyzing model silver.silver_products
+10:56:29.523367 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_products at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_products.sql
+10:56:29.523367 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_customers at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_customers.sql
+10:56:29.523382 [debug]: Finished analyzing [  0.00s] model gold.fct_orders [success]
+10:56:29.523393 [info ]:  Succeeded model gold.fct_orders (table) [3 of 15 in 0.00s]
+10:56:29.523413 [debug]: Finished analyzing [  0.00s] snapshot snapshots.snapshot_customers [success]
+10:56:29.523420 [info ]:  Succeeded snapshot snapshots.snapshot_customers (snapshot) [1 of 15 in 0.00s]
+10:56:29.523429 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_orders at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_orders.sql
+10:56:29.523439 [debug]: Finished rendering [  0.00s] model bronze.bronze_customers [success]
+10:56:29.523451 [debug]: Started analyzing model bronze.bronze_customers
+10:56:29.523462 [debug]: Finished rendering [  0.00s] model bronze.bronze_products [success]
+10:56:29.523470 [debug]: Started analyzing model bronze.bronze_products
+10:56:29.523495 [debug]: Finished rendering [  0.00s] model bronze.bronze_orders [success]
+10:56:29.523503 [info ]: Finished rendering [  0.00s] (15 nodes, 0 skipped, 0 errors)
+10:56:29.523513 [debug]: Started analyzing model bronze.bronze_orders
+10:56:29.523573 [debug]: Finished analyzing [  0.00s] model bronze.bronze_products [success]
+10:56:29.523578 [info ]:  Succeeded model bronze.bronze_products (view) [10 of 15 in 0.00s]
+10:56:29.523598 [debug]: Finished analyzing [  0.00s] model bronze.bronze_customers [success]
+10:56:29.523605 [info ]:  Succeeded model bronze.bronze_customers (view) [14 of 15 in 0.00s]
+10:56:29.523622 [debug]: Finished analyzing [  0.00s] model silver.silver_products [success]
+10:56:29.523626 [info ]:  Succeeded model silver.silver_products (table) [8 of 15 in 0.00s]
+10:56:29.524029 [debug]: Finished analyzing [  0.00s] model gold.dim_customers [success]
+10:56:29.524037 [info ]:  Succeeded model gold.dim_customers (table) [6 of 15 in 0.00s]
+10:56:29.524068 [debug]: Finished analyzing [  0.00s] model silver.silver_customers [success]
+10:56:29.524073 [info ]:  Succeeded model silver.silver_customers (table) [9 of 15 in 0.00s]
+10:56:29.524110 [debug]: Finished analyzing [  0.00s] model bronze.bronze_orders [success]
+10:56:29.524115 [info ]:  Succeeded model bronze.bronze_orders (view) [12 of 15 in 0.00s]
+10:56:29.524198 [debug]: Finished analyzing [  0.00s] model silver.silver_orders [success]
+10:56:29.524203 [info ]:  Succeeded model silver.silver_orders (table) [7 of 15 in 0.00s]
+10:56:29.524318 [debug]: Finished analyzing [  0.00s] model gold.dim_products [success]
+10:56:29.524323 [info ]:  Succeeded model gold.dim_products (table) [4 of 15 in 0.00s]
+10:56:29.528323 [debug]: Finished analyzing [  0.01s] model gold.mart_customer_daily_summary [success]
+10:56:29.528329 [info ]: Finished analyzing [  0.01s] (11 nodes, 0 skipped, 0 errors)
+10:56:29.528333 [info ]:  Succeeded model gold.mart_customer_daily_summary (table) [2 of 15 in 0.01s]
+10:56:29.529841 [info ]: Started scheduling
+10:56:29.529869 [info ]: Finished scheduling [  0.00s]
+10:56:29.529901 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [55ms]
+Processed: 10 models | 1 snapshot | 3 seeds | 1 analysis
+Summary: 15 total | 15 success
+10:56:29.529946 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-11-07T10:56:34.288450Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-11-07T10:56:34.288539Z | 55c2f2f0-8a6d-4207-9bd6-f423a34f4b3f ====================
+10:56:34.288553 [info ]: Starting dbt LSP server
+10:56:34.288569 [info ]: Connecting to LSP client on port 8000
+10:56:34.288762 [info ]: Successfully connected to LSP client
+10:56:34.288774 [info ]: Creating LSP service...
+10:56:34.289374 [info ]: Creating LSP server...
+10:56:34.289381 [info ]: Starting LSP server...
+10:56:34.292053 [info ]: Loading profiles.yml
+==================== 2026-11-07T10:56:34.300279Z | 0f7ac31e-7b75-4dd1-b449-6f735f87e48c ====================
+10:56:34.300319 [info ]: Started loading project
+10:56:34.300565 [info ]: Loading profiles.yml
+10:56:34.304690 [debug]:    Started loading packages
+10:56:34.305528 [debug]:     Loaded [  0.00s] packages
+10:56:34.305944 [info ]: Finished loading project [  0.01s]
+10:56:34.306099 [info ]: Started parsing (16 nodes)
+10:56:34.319370 [debug]: Finished parsing models/bronze/bronze_sources.yml [  0.00s]
+10:56:34.319392 [debug]:    Started building model nodes
+10:56:34.319395 [debug]:    Started building model nodes
+10:56:34.319401 [debug]:   Finished [  0.00s] building model nodes
+10:56:34.319401 [debug]:   Finished [  0.00s] building model nodes
+10:56:34.319544 [debug]: Finished parsing models/gold/gold_models.yml [  0.00s]
+10:56:34.319696 [debug]: Finished parsing models/silver/silver_models.yml [  0.00s]
+10:56:34.319808 [debug]:    Started resolving data tests
+10:56:34.319809 [debug]:    Started resolving data tests
+10:56:34.319830 [debug]:   Finished [  0.00s] resolving data tests
+10:56:34.319830 [debug]:   Finished [  0.00s] resolving data tests
+10:56:34.321192 [debug]: Finished parsing snapshots/snapshot_customers.sql [  0.00s]
+10:56:34.322425 [debug]: Finished parsing models/bronze/bronze_customers.sql [  0.00s]
+10:56:34.322714 [debug]: Finished parsing models/bronze/bronze_orders.sql [  0.00s]
+10:56:34.322959 [debug]: Finished parsing models/bronze/bronze_products.sql [  0.00s]
+10:56:34.323306 [debug]: Finished parsing models/gold/dim_customers.sql [  0.00s]
+10:56:34.323551 [debug]: Finished parsing models/gold/dim_products.sql [  0.00s]
+10:56:34.323729 [debug]: Finished parsing models/gold/fct_orders.sql [  0.00s]
+10:56:34.323908 [debug]: Finished parsing models/gold/mart_customer_daily_summary.sql [  0.00s]
+10:56:34.324093 [debug]: Finished parsing models/silver/silver_customers.sql [  0.00s]
+10:56:34.324271 [debug]: Finished parsing models/silver/silver_orders.sql [  0.00s]
+10:56:34.324490 [debug]:    Started building model nodes
+10:56:34.325888 [debug]:   Finished [  0.00s] building model nodes
+10:56:34.325942 [debug]: Finished parsing models/silver/silver_products.sql [  0.00s]
+10:56:34.326448 [debug]:    Started resolving data tests
+10:56:34.326473 [debug]: Finished parsing analyses/sample_query.sql [  0.00s]
+10:56:34.326877 [debug]: Finished parsing tests/assert_order_total_is_positive.sql [  0.00s]
+10:56:34.326882 [debug]:   Finished [  0.00s] resolving data tests
+10:56:34.327038 [debug]:    Started typechecking macros
+10:56:34.373137 [debug]:   Finished [  0.05s] typechecking macros
+10:56:34.373545 [info ]: Finished parsing [  0.07s] (16 nodes, 0 skipped, 0 errors)
+10:56:34.373718 [info ]: Cached model count updated: 10 models (estimate)
+10:56:34.373724 [info ]: Cached model count updated: 10 models (accurate)
+10:56:34.373753 [info ]: Started scheduling
+10:56:34.373846 [info ]: Finished scheduling [  0.00s]
+10:56:34.373852 [debug]: Compilation - 11 nodes selected: {"analysis.dbt_databricks_learning.sample_query", "model.dbt_databricks_learning.bronze_customers", "model.dbt_databricks_learning.bronze_orders", "model.dbt_databricks_learning.bronze_products", "model.dbt_databricks_learning.dim_customers", "model.dbt_databricks_learning.silver_customers", "model.dbt_databricks_learning.silver_orders", "model.dbt_databricks_learning.silver_products", "seed.dbt_databricks_learning.raw_customers", "seed.dbt_databricks_learning.raw_orders", "seed.dbt_databricks_learning.raw_products"}
+10:56:34.373870 [info ]: Started scheduling
+10:56:34.373918 [info ]: Finished scheduling [  0.00s]
+10:56:34.374901 [info ]: Started building task graph
+10:56:34.374961 [info ]: Finished building task graph [  0.00s]
+10:56:34.399175 [info ]: Started rendering (11 nodes)
+10:56:34.399188 [info ]: Started analysis main.sample_query
+10:56:34.399194 [debug]: Started rendering analysis main.sample_query
+10:56:34.399206 [info ]: Started model gold.dim_customers
+10:56:34.399210 [debug]: Started rendering model gold.dim_customers
+10:56:34.399214 [info ]: Started model silver.silver_orders
+10:56:34.399217 [debug]: Started rendering model silver.silver_orders
+10:56:34.399221 [info ]: Started model silver.silver_products
+10:56:34.399224 [debug]: Started rendering model silver.silver_products
+10:56:34.399231 [info ]: Started model silver.silver_customers
+10:56:34.399233 [debug]: Started rendering model silver.silver_customers
+10:56:34.399237 [info ]: Started model bronze.bronze_products
+10:56:34.399239 [debug]: Started rendering model bronze.bronze_products
+10:56:34.399244 [info ]: Started seed raw_seed.raw_products
+10:56:34.399247 [debug]: Started rendering seed raw_seed.raw_products
+10:56:34.399251 [info ]: Started model bronze.bronze_orders
+10:56:34.399254 [debug]: Started rendering model bronze.bronze_orders
+10:56:34.399258 [info ]: Started seed raw_seed.raw_orders
+10:56:34.399260 [debug]: Started rendering seed raw_seed.raw_orders
+10:56:34.399264 [info ]: Started model bronze.bronze_customers
+10:56:34.399267 [debug]: Started rendering model bronze.bronze_customers
+10:56:34.399273 [info ]: Started seed raw_seed.raw_customers
+10:56:34.399275 [debug]: Started rendering seed raw_seed.raw_customers
+10:56:34.399315 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_orders [success]
+10:56:34.399327 [info ]:  Succeeded seed  raw_seed.raw_orders (table) [9 of 11 in 0.00s]
+10:56:34.399342 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_products [success]
+10:56:34.399347 [info ]:  Succeeded seed  raw_seed.raw_products (table) [7 of 11 in 0.00s]
+10:56:34.399353 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_customers [success]
+10:56:34.399356 [info ]:  Succeeded seed  raw_seed.raw_customers (table) [11 of 11 in 0.00s]
+10:56:34.399588 [debug]: Compiled SQL for node analysis.dbt_databricks_learning.sample_query at target/.lsp/compiled/dbt_databricks_learning/analyses/sample_query.sql
+10:56:34.399628 [debug]: Finished rendering [  0.00s] analysis main.sample_query [success]
+10:56:34.399631 [info ]:  Succeeded analysis main.sample_query (analysis) [1 of 11 in 0.00s]
+10:56:34.399696 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_orders at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_orders.sql
+10:56:34.399744 [debug]: Finished rendering [  0.00s] model silver.silver_orders [success]
+10:56:34.399765 [info ]: Started analyzing (7 nodes)
+10:56:34.399772 [debug]: Started analyzing model silver.silver_orders
+10:56:34.399853 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_products at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_products.sql
+10:56:34.399913 [debug]: Finished rendering [  0.00s] model silver.silver_products [success]
+10:56:34.399945 [debug]: Started analyzing model silver.silver_products
+10:56:34.400071 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_orders at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_orders.sql
+10:56:34.400127 [debug]: Finished rendering [  0.00s] model bronze.bronze_orders [success]
+10:56:34.400136 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_customers at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_customers.sql
+10:56:34.400142 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_customers at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_customers.sql
+10:56:34.400146 [debug]: Started analyzing model bronze.bronze_orders
+10:56:34.400162 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_customers at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_customers.sql
+10:56:34.400174 [debug]: Finished rendering [  0.00s] model silver.silver_customers [success]
+10:56:34.400179 [debug]: Started analyzing model silver.silver_customers
+10:56:34.400184 [debug]: Finished rendering [  0.00s] model bronze.bronze_customers [success]
+10:56:34.400186 [debug]: Started analyzing model bronze.bronze_customers
+10:56:34.400216 [debug]: Finished rendering [  0.00s] model gold.dim_customers [success]
+10:56:34.400224 [debug]: Started analyzing model gold.dim_customers
+10:56:34.400396 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_products at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_products.sql
+10:56:34.400461 [debug]: Finished rendering [  0.00s] model bronze.bronze_products [success]
+10:56:34.400474 [info ]: Finished rendering [  0.00s] (11 nodes, 0 skipped, 0 errors)
+10:56:34.400493 [debug]: Started analyzing model bronze.bronze_products
+10:56:34.402726 [debug]: Finished analyzing [  0.00s] model bronze.bronze_customers [success]
+10:56:34.402732 [info ]:  Succeeded model bronze.bronze_customers (view) [10 of 11 in 0.00s]
+10:56:34.402740 [debug]: Finished analyzing [  0.00s] model bronze.bronze_products [success]
+10:56:34.402742 [info ]:  Succeeded model bronze.bronze_products (view) [6 of 11 in 0.00s]
+10:56:34.405257 [debug]: Finished analyzing [  0.01s] model bronze.bronze_orders [success]
+10:56:34.405262 [info ]:  Succeeded model bronze.bronze_orders (view) [8 of 11 in 0.01s]
+10:56:34.407047 [debug]: Finished analyzing [  0.01s] model silver.silver_customers [success]
+10:56:34.407054 [info ]:  Succeeded model silver.silver_customers (table) [5 of 11 in 0.01s]
+10:56:34.407396 [debug]: Finished analyzing [  0.01s] model silver.silver_products [success]
+10:56:34.407400 [info ]:  Succeeded model silver.silver_products (table) [4 of 11 in 0.01s]
+10:56:34.408271 [debug]: Finished analyzing [  0.01s] model silver.silver_orders [success]
+10:56:34.408275 [info ]:  Succeeded model silver.silver_orders (table) [3 of 11 in 0.01s]
+10:56:34.409136 [debug]: Finished analyzing [  0.01s] model gold.dim_customers [success]
+10:56:34.409141 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+10:56:34.409144 [info ]:  Succeeded model gold.dim_customers (table) [2 of 11 in 0.01s]
+10:56:34.410411 [info ]: Started scheduling
+10:56:34.410437 [info ]: Finished scheduling [  0.00s]
+10:56:34.410491 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [110ms]
+Processed: 7 models | 3 seeds | 1 analysis
+Summary: 11 total | 11 success
+10:56:34.410523 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-11-07T10:56:35.591047Z | 25230b23-83f8-473c-b763-c6c1ae796db7 ====================
+10:56:35.591156 [info ]: Started loading project
+10:56:35.591681 [info ]: Loading profiles.yml
+10:56:35.595778 [info ]: Finished loading project [  0.00s]
+10:56:35.614356 [info ]: Cached model count updated: 10 models (estimate)
+10:56:35.614379 [info ]: Cached model count updated: 10 models (accurate)
+10:56:35.614425 [info ]: Started scheduling
+10:56:35.614573 [info ]: Finished scheduling [  0.00s]
+10:56:35.614591 [debug]: Compilation - 15 nodes selected: {"analysis.dbt_databricks_learning.sample_query", "model.dbt_databricks_learning.bronze_customers", "model.dbt_databricks_learning.bronze_orders", "model.dbt_databricks_learning.bronze_products", "model.dbt_databricks_learning.dim_customers", "model.dbt_databricks_learning.dim_products", "model.dbt_databricks_learning.fct_orders", "model.dbt_databricks_learning.mart_customer_daily_summary", "model.dbt_databricks_learning.silver_customers", "model.dbt_databricks_learning.silver_orders", "model.dbt_databricks_learning.silver_products", "seed.dbt_databricks_learning.raw_customers", "seed.dbt_databricks_learning.raw_orders", "seed.dbt_databricks_learning.raw_products", "snapshot.dbt_databricks_learning.snapshot_customers"}
+10:56:35.615995 [info ]: Started building task graph
+10:56:35.616110 [info ]: Finished building task graph [  0.00s]
+10:56:35.646789 [info ]: Started rendering (15 nodes)
+10:56:35.646800 [info ]: Started snapshot snapshots.snapshot_customers
+10:56:35.646805 [debug]: Started rendering snapshot snapshots.snapshot_customers
+10:56:35.646816 [info ]: Started model gold.mart_customer_daily_summary
+10:56:35.646820 [debug]: Started rendering model gold.mart_customer_daily_summary
+10:56:35.646824 [info ]: Started model gold.fct_orders
+10:56:35.646827 [debug]: Started rendering model gold.fct_orders
+10:56:35.646831 [info ]: Started model gold.dim_products
+10:56:35.646837 [debug]: Started rendering model gold.dim_products
+10:56:35.646843 [info ]: Started analysis main.sample_query
+10:56:35.646846 [debug]: Started rendering analysis main.sample_query
+10:56:35.646850 [info ]: Started model gold.dim_customers
+10:56:35.646853 [debug]: Started rendering model gold.dim_customers
+10:56:35.646858 [info ]: Started model silver.silver_orders
+10:56:35.646861 [debug]: Started rendering model silver.silver_orders
+10:56:35.646867 [info ]: Started model silver.silver_products
+10:56:35.646871 [debug]: Started rendering model silver.silver_products
+10:56:35.646876 [info ]: Started model silver.silver_customers
+10:56:35.646879 [debug]: Started rendering model silver.silver_customers
+10:56:35.646885 [info ]: Started model bronze.bronze_products
+10:56:35.646888 [debug]: Started rendering model bronze.bronze_products
+10:56:35.646896 [info ]: Started seed raw_seed.raw_products
+10:56:35.646898 [debug]: Started rendering seed raw_seed.raw_products
+10:56:35.646903 [info ]: Started model bronze.bronze_orders
+10:56:35.646906 [debug]: Started rendering model bronze.bronze_orders
+10:56:35.646912 [info ]: Started seed raw_seed.raw_orders
+10:56:35.646915 [debug]: Started rendering seed raw_seed.raw_orders
+10:56:35.646922 [info ]: Started model bronze.bronze_customers
+10:56:35.646924 [debug]: Started rendering model bronze.bronze_customers
+10:56:35.646930 [info ]: Started seed raw_seed.raw_customers
+10:56:35.646933 [debug]: Started rendering seed raw_seed.raw_customers
+10:56:35.646944 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_orders [success]
+10:56:35.646951 [info ]:  Succeeded seed  raw_seed.raw_orders (table) [13 of 15 in 0.00s]
+10:56:35.646961 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_products [success]
+10:56:35.646964 [info ]:  Succeeded seed  raw_seed.raw_products (table) [11 of 15 in 0.00s]
+10:56:35.646973 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_customers [success]
+10:56:35.646975 [info ]:  Succeeded seed  raw_seed.raw_customers (table) [15 of 15 in 0.00s]
+10:56:35.647016 [debug]: Compiled SQL for node analysis.dbt_databricks_learning.sample_query at target/.lsp/compiled/dbt_databricks_learning/analyses/sample_query.sql
+10:56:35.647064 [debug]: Finished rendering [  0.00s] analysis main.sample_query [success]
+10:56:35.647078 [info ]:  Succeeded analysis main.sample_query (analysis) [5 of 15 in 0.00s]
+10:56:35.647120 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_customers at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_customers.sql
+10:56:35.647161 [debug]: Finished rendering [  0.00s] model gold.dim_customers [success]
+10:56:35.647183 [info ]: Started analyzing (11 nodes)
+10:56:35.647189 [debug]: Started analyzing model gold.dim_customers
+10:56:35.647208 [debug]: Compiled SQL for node snapshot.dbt_databricks_learning.snapshot_customers at target/.lsp/compiled/dbt_databricks_learning/snapshots/snapshot_customers.sql/snapshot_customers.sql
+10:56:35.647240 [debug]: Finished rendering [  0.00s] snapshot snapshots.snapshot_customers [success]
+10:56:35.647264 [debug]: Started analyzing snapshot snapshots.snapshot_customers
+10:56:35.647246 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_orders at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_orders.sql
+10:56:35.647309 [debug]: Finished rendering [  0.00s] model silver.silver_orders [success]
+10:56:35.647307 [debug]: Compiled SQL for node model.dbt_databricks_learning.mart_customer_daily_summary at target/.lsp/compiled/dbt_databricks_learning/models/gold/mart_customer_daily_summary.sql
+10:56:35.647329 [debug]: Started analyzing model silver.silver_orders
+10:56:35.647397 [debug]: Finished rendering [  0.00s] model gold.mart_customer_daily_summary [success]
+10:56:35.647415 [debug]: Started analyzing model gold.mart_customer_daily_summary
+10:56:35.647433 [debug]: Finished analyzing [  0.00s] snapshot snapshots.snapshot_customers [success]
+10:56:35.647443 [info ]:  Succeeded snapshot snapshots.snapshot_customers (snapshot) [1 of 15 in 0.00s]
+10:56:35.647462 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_products at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_products.sql
+10:56:35.647464 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_customers at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_customers.sql
+10:56:35.647513 [debug]: Finished rendering [  0.00s] model silver.silver_customers [success]
+10:56:35.647525 [debug]: Started analyzing model silver.silver_customers
+10:56:35.647537 [debug]: Finished rendering [  0.00s] model silver.silver_products [success]
+10:56:35.647541 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_orders at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_orders.sql
+10:56:35.647547 [debug]: Compiled SQL for node model.dbt_databricks_learning.fct_orders at target/.lsp/compiled/dbt_databricks_learning/models/gold/fct_orders.sql
+10:56:35.647548 [debug]: Started analyzing model silver.silver_products
+10:56:35.647584 [debug]: Finished rendering [  0.00s] model bronze.bronze_orders [success]
+10:56:35.647591 [debug]: Started analyzing model bronze.bronze_orders
+10:56:35.647619 [debug]: Finished rendering [  0.00s] model gold.fct_orders [success]
+10:56:35.647619 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_products at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_products.sql
+10:56:35.647627 [debug]: Started analyzing model gold.fct_orders
+10:56:35.647634 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_customers at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_customers.sql
+10:56:35.647683 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_products at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_products.sql
+10:56:35.647693 [debug]: Finished rendering [  0.00s] model bronze.bronze_products [success]
+10:56:35.647710 [debug]: Started analyzing model bronze.bronze_products
+10:56:35.647781 [debug]: Finished analyzing [  0.00s] model gold.fct_orders [success]
+10:56:35.647792 [info ]:  Succeeded model gold.fct_orders (table) [3 of 15 in 0.00s]
+10:56:35.647805 [debug]: Finished analyzing [  0.00s] model silver.silver_products [success]
+10:56:35.647811 [info ]:  Succeeded model silver.silver_products (table) [8 of 15 in 0.00s]
+10:56:35.647819 [debug]: Finished analyzing [  0.00s] model bronze.bronze_products [success]
+10:56:35.647823 [info ]:  Succeeded model bronze.bronze_products (view) [10 of 15 in 0.00s]
+10:56:35.647833 [debug]: Finished rendering [  0.00s] model bronze.bronze_customers [success]
+10:56:35.647841 [debug]: Started analyzing model bronze.bronze_customers
+10:56:35.647856 [debug]: Finished rendering [  0.00s] model gold.dim_products [success]
+10:56:35.647862 [info ]: Finished rendering [  0.00s] (15 nodes, 0 skipped, 0 errors)
+10:56:35.647868 [debug]: Started analyzing model gold.dim_products
+10:56:35.647936 [debug]: Finished analyzing [  0.00s] model bronze.bronze_customers [success]
+10:56:35.647944 [info ]:  Succeeded model bronze.bronze_customers (view) [14 of 15 in 0.00s]
+10:56:35.647964 [debug]: Finished analyzing [  0.00s] model bronze.bronze_orders [success]
+10:56:35.647970 [info ]:  Succeeded model bronze.bronze_orders (view) [12 of 15 in 0.00s]
+10:56:35.648077 [debug]: Finished analyzing [  0.00s] model silver.silver_orders [success]
+10:56:35.648085 [info ]:  Succeeded model silver.silver_orders (table) [7 of 15 in 0.00s]
+10:56:35.648174 [debug]: Finished analyzing [  0.00s] model silver.silver_customers [success]
+10:56:35.648181 [info ]:  Succeeded model silver.silver_customers (table) [9 of 15 in 0.00s]
+10:56:35.648277 [debug]: Finished analyzing [  0.00s] model gold.dim_customers [success]
+10:56:35.648283 [info ]:  Succeeded model gold.dim_customers (table) [6 of 15 in 0.00s]
+10:56:35.648637 [debug]: Finished analyzing [  0.00s] model gold.dim_products [success]
+10:56:35.648642 [info ]:  Succeeded model gold.dim_products (table) [4 of 15 in 0.00s]
+10:56:35.652751 [debug]: Finished analyzing [  0.01s] model gold.mart_customer_daily_summary [success]
+10:56:35.652756 [info ]: Finished analyzing [  0.01s] (11 nodes, 0 skipped, 0 errors)
+10:56:35.652760 [info ]:  Succeeded model gold.mart_customer_daily_summary (table) [2 of 15 in 0.01s]
+10:56:35.654155 [info ]: Started scheduling
+10:56:35.654181 [info ]: Finished scheduling [  0.00s]
+10:56:35.654216 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [63ms]
+Processed: 10 models | 1 snapshot | 3 seeds | 1 analysis
+Summary: 15 total | 15 success
+10:56:35.654259 [info ]: Cached model count updated: 10 models (accurate)
+10:57:18.394982 [debug]: Ignoring unsupported LSP notification
+10:57:18.425006 [debug]: Ignoring unsupported LSP notification
+==================== 2026-11-07T10:57:40.597428Z | d618ea5b-22de-4d9a-a312-52aa263af019 ====================
+10:57:40.597465 [info ]: Started loading project
+10:57:40.597698 [info ]: Loading profiles.yml
+10:57:40.600259 [info ]: Finished loading project [  0.00s]
+10:57:40.609740 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [12ms]
+10:57:40.609775 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-11-07T10:57:41.793759Z | 373a630e-59c4-4045-b81d-36f27e275d2c ====================
+10:57:41.793917 [info ]: Started loading project
+10:57:41.794480 [info ]: Loading profiles.yml
+10:57:41.798690 [info ]: Finished loading project [  0.00s]
+10:57:41.816354 [info ]: Cached model count updated: 10 models (estimate)
+10:57:41.816391 [info ]: Cached model count updated: 10 models (accurate)
+10:57:41.816444 [info ]: Started scheduling
+10:57:41.816599 [info ]: Finished scheduling [  0.00s]
+10:57:41.816620 [debug]: Compilation - 15 nodes selected: {"analysis.dbt_databricks_learning.sample_query", "model.dbt_databricks_learning.bronze_customers", "model.dbt_databricks_learning.bronze_orders", "model.dbt_databricks_learning.bronze_products", "model.dbt_databricks_learning.dim_customers", "model.dbt_databricks_learning.dim_products", "model.dbt_databricks_learning.fct_orders", "model.dbt_databricks_learning.mart_customer_daily_summary", "model.dbt_databricks_learning.silver_customers", "model.dbt_databricks_learning.silver_orders", "model.dbt_databricks_learning.silver_products", "seed.dbt_databricks_learning.raw_customers", "seed.dbt_databricks_learning.raw_orders", "seed.dbt_databricks_learning.raw_products", "snapshot.dbt_databricks_learning.snapshot_customers"}
+10:57:41.818777 [info ]: Started building task graph
+10:57:41.818896 [info ]: Finished building task graph [  0.00s]
+10:57:41.854839 [info ]: Started rendering (15 nodes)
+10:57:41.854855 [info ]: Started snapshot snapshots.snapshot_customers
+10:57:41.854860 [debug]: Started rendering snapshot snapshots.snapshot_customers
+10:57:41.854872 [info ]: Started model gold.mart_customer_daily_summary
+10:57:41.854876 [debug]: Started rendering model gold.mart_customer_daily_summary
+10:57:41.854882 [info ]: Started model gold.fct_orders
+10:57:41.854887 [debug]: Started rendering model gold.fct_orders
+10:57:41.854891 [info ]: Started model gold.dim_products
+10:57:41.854894 [debug]: Started rendering model gold.dim_products
+10:57:41.854900 [info ]: Started analysis main.sample_query
+10:57:41.854903 [debug]: Started rendering analysis main.sample_query
+10:57:41.854907 [info ]: Started model gold.dim_customers
+10:57:41.854910 [debug]: Started rendering model gold.dim_customers
+10:57:41.854915 [info ]: Started model silver.silver_orders
+10:57:41.854918 [debug]: Started rendering model silver.silver_orders
+10:57:41.854922 [info ]: Started model silver.silver_products
+10:57:41.854925 [debug]: Started rendering model silver.silver_products
+10:57:41.854931 [info ]: Started model silver.silver_customers
+10:57:41.854938 [debug]: Started rendering model silver.silver_customers
+10:57:41.854947 [info ]: Started model bronze.bronze_products
+10:57:41.854950 [debug]: Started rendering model bronze.bronze_products
+10:57:41.854956 [info ]: Started seed raw_seed.raw_products
+10:57:41.854959 [debug]: Started rendering seed raw_seed.raw_products
+10:57:41.854964 [info ]: Started model bronze.bronze_orders
+10:57:41.854966 [debug]: Started rendering model bronze.bronze_orders
+10:57:41.854972 [info ]: Started seed raw_seed.raw_orders
+10:57:41.854975 [debug]: Started rendering seed raw_seed.raw_orders
+10:57:41.854981 [info ]: Started model bronze.bronze_customers
+10:57:41.854984 [debug]: Started rendering model bronze.bronze_customers
+10:57:41.854989 [info ]: Started seed raw_seed.raw_customers
+10:57:41.854994 [debug]: Started rendering seed raw_seed.raw_customers
+10:57:41.855007 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_products [success]
+10:57:41.855013 [info ]:  Succeeded seed  raw_seed.raw_products (table) [11 of 15 in 0.00s]
+10:57:41.855022 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_orders [success]
+10:57:41.855025 [info ]:  Succeeded seed  raw_seed.raw_orders (table) [13 of 15 in 0.00s]
+10:57:41.855035 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_customers [success]
+10:57:41.855037 [info ]:  Succeeded seed  raw_seed.raw_customers (table) [15 of 15 in 0.00s]
+10:57:41.855924 [debug]: Compiled SQL for node model.dbt_databricks_learning.fct_orders at target/.lsp/compiled/dbt_databricks_learning/models/gold/fct_orders.sql
+10:57:41.855939 [debug]: Compiled SQL for node snapshot.dbt_databricks_learning.snapshot_customers at target/.lsp/compiled/dbt_databricks_learning/snapshots/snapshot_customers.sql/snapshot_customers.sql
+10:57:41.855955 [debug]: Compiled SQL for node model.dbt_databricks_learning.mart_customer_daily_summary at target/.lsp/compiled/dbt_databricks_learning/models/gold/mart_customer_daily_summary.sql
+10:57:41.856001 [debug]: Finished rendering [  0.00s] model gold.fct_orders [success]
+10:57:41.856017 [info ]: Started analyzing (11 nodes)
+10:57:41.856021 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_products at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_products.sql
+10:57:41.856024 [debug]: Started analyzing model gold.fct_orders
+10:57:41.856033 [debug]: Finished rendering [  0.00s] snapshot snapshots.snapshot_customers [success]
+10:57:41.856044 [debug]: Started analyzing snapshot snapshots.snapshot_customers
+10:57:41.856050 [debug]: Finished rendering [  0.00s] model gold.mart_customer_daily_summary [success]
+10:57:41.856054 [debug]: Started analyzing model gold.mart_customer_daily_summary
+10:57:41.856062 [debug]: Finished rendering [  0.00s] model gold.dim_products [success]
+10:57:41.856092 [debug]: Started analyzing model gold.dim_products
+10:57:41.856240 [debug]: Finished analyzing [  0.00s] snapshot snapshots.snapshot_customers [success]
+10:57:41.856246 [info ]:  Succeeded snapshot snapshots.snapshot_customers (snapshot) [1 of 15 in 0.00s]
+10:57:41.856252 [debug]: Finished analyzing [  0.00s] model gold.fct_orders [success]
+10:57:41.856255 [info ]:  Succeeded model gold.fct_orders (table) [3 of 15 in 0.00s]
+10:57:41.856765 [debug]: Finished analyzing [  0.00s] model gold.dim_products [success]
+10:57:41.856770 [info ]:  Succeeded model gold.dim_products (table) [4 of 15 in 0.00s]
+10:57:41.856808 [debug]: Finished analyzing [  0.00s] model gold.mart_customer_daily_summary [success]
+10:57:41.856813 [info ]:  Succeeded model gold.mart_customer_daily_summary (table) [2 of 15 in 0.00s]
+10:57:41.856967 [debug]: Compiled SQL for node analysis.dbt_databricks_learning.sample_query at target/.lsp/compiled/dbt_databricks_learning/analyses/sample_query.sql
+10:57:41.856981 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_products at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_products.sql
+10:57:41.857011 [debug]: Finished rendering [  0.00s] analysis main.sample_query [success]
+10:57:41.857028 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_orders at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_orders.sql
+10:57:41.857029 [info ]:  Succeeded analysis main.sample_query (analysis) [5 of 15 in 0.00s]
+10:57:41.857038 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_customers at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_customers.sql
+10:57:41.857050 [debug]: Finished rendering [  0.00s] model silver.silver_products [success]
+10:57:41.857064 [debug]: Started analyzing model silver.silver_products
+10:57:41.857091 [debug]: Finished rendering [  0.00s] model silver.silver_orders [success]
+10:57:41.857114 [debug]: Started analyzing model silver.silver_orders
+10:57:41.857121 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_products at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_products.sql
+10:57:41.857135 [debug]: Finished rendering [  0.00s] model silver.silver_customers [success]
+10:57:41.857147 [debug]: Started analyzing model silver.silver_customers
+10:57:41.857169 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_customers at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_customers.sql
+10:57:41.857174 [debug]: Finished rendering [  0.00s] model bronze.bronze_products [success]
+10:57:41.857182 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_customers at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_customers.sql
+10:57:41.857181 [debug]: Started analyzing model bronze.bronze_products
+10:57:41.857208 [debug]: Finished rendering [  0.00s] model bronze.bronze_customers [success]
+10:57:41.857218 [debug]: Started analyzing model bronze.bronze_customers
+10:57:41.857223 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_orders at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_orders.sql
+10:57:41.857231 [debug]: Finished rendering [  0.00s] model gold.dim_customers [success]
+10:57:41.857242 [debug]: Started analyzing model gold.dim_customers
+10:57:41.857276 [debug]: Finished rendering [  0.00s] model bronze.bronze_orders [success]
+10:57:41.857288 [info ]: Finished rendering [  0.00s] (15 nodes, 0 skipped, 0 errors)
+10:57:41.857297 [debug]: Started analyzing model bronze.bronze_orders
+10:57:41.857321 [debug]: Finished analyzing [  0.00s] model bronze.bronze_products [success]
+10:57:41.857330 [info ]:  Succeeded model bronze.bronze_products (view) [10 of 15 in 0.00s]
+10:57:41.857338 [debug]: Finished analyzing [  0.00s] model bronze.bronze_customers [success]
+10:57:41.857342 [info ]:  Succeeded model bronze.bronze_customers (view) [14 of 15 in 0.00s]
+10:57:41.857370 [debug]: Finished analyzing [  0.00s] model silver.silver_products [success]
+10:57:41.857381 [info ]:  Succeeded model silver.silver_products (table) [8 of 15 in 0.00s]
+10:57:41.857663 [debug]: Finished analyzing [  0.00s] model bronze.bronze_orders [success]
+10:57:41.857669 [info ]:  Succeeded model bronze.bronze_orders (view) [12 of 15 in 0.00s]
+10:57:41.857763 [debug]: Finished analyzing [  0.00s] model silver.silver_orders [success]
+10:57:41.857769 [info ]:  Succeeded model silver.silver_orders (table) [7 of 15 in 0.00s]
+10:57:41.857800 [debug]: Finished analyzing [  0.00s] model silver.silver_customers [success]
+10:57:41.857804 [info ]:  Succeeded model silver.silver_customers (table) [9 of 15 in 0.00s]
+10:57:41.858045 [debug]: Finished analyzing [  0.00s] model gold.dim_customers [success]
+10:57:41.858049 [info ]: Finished analyzing [  0.00s] (11 nodes, 0 skipped, 0 errors)
+10:57:41.858052 [info ]:  Succeeded model gold.dim_customers (table) [6 of 15 in 0.00s]
+10:57:41.859496 [info ]: Started scheduling
+10:57:41.859523 [info ]: Finished scheduling [  0.00s]
+10:57:41.859551 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [65ms]
+Processed: 10 models | 1 snapshot | 3 seeds | 1 analysis
+Summary: 15 total | 15 success
+10:57:41.859585 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-11-07T10:57:45.468083Z | 6795eb69-a2a6-4db4-b6b1-129b4815481d ====================
+10:57:45.468138 [info ]: Started loading project
+10:57:45.468448 [info ]: Loading profiles.yml
+10:57:45.470643 [info ]: Finished loading project [  0.00s]
+10:57:45.480446 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [12ms]
+10:57:45.480479 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-11-07T10:57:46.666802Z | 82a3749e-899b-459f-b7cf-961652cfb73e ====================
+10:57:46.666921 [info ]: Started loading project
+10:57:46.667615 [info ]: Loading profiles.yml
+10:57:46.673268 [info ]: Finished loading project [  0.01s]
+10:57:46.691820 [info ]: Cached model count updated: 10 models (estimate)
+10:57:46.691845 [info ]: Cached model count updated: 10 models (accurate)
+10:57:46.691878 [info ]: Started scheduling
+10:57:46.691995 [info ]: Finished scheduling [  0.00s]
+10:57:46.692010 [debug]: Compilation - 15 nodes selected: {"analysis.dbt_databricks_learning.sample_query", "model.dbt_databricks_learning.bronze_customers", "model.dbt_databricks_learning.bronze_orders", "model.dbt_databricks_learning.bronze_products", "model.dbt_databricks_learning.dim_customers", "model.dbt_databricks_learning.dim_products", "model.dbt_databricks_learning.fct_orders", "model.dbt_databricks_learning.mart_customer_daily_summary", "model.dbt_databricks_learning.silver_customers", "model.dbt_databricks_learning.silver_orders", "model.dbt_databricks_learning.silver_products", "seed.dbt_databricks_learning.raw_customers", "seed.dbt_databricks_learning.raw_orders", "seed.dbt_databricks_learning.raw_products", "snapshot.dbt_databricks_learning.snapshot_customers"}
+10:57:46.693021 [info ]: Started building task graph
+10:57:46.693111 [info ]: Finished building task graph [  0.00s]
+10:57:46.737740 [info ]: Started rendering (15 nodes)
+10:57:46.737757 [info ]: Started snapshot snapshots.snapshot_customers
+10:57:46.737764 [debug]: Started rendering snapshot snapshots.snapshot_customers
+10:57:46.737776 [info ]: Started model gold.mart_customer_daily_summary
+10:57:46.737779 [debug]: Started rendering model gold.mart_customer_daily_summary
+10:57:46.737784 [info ]: Started model gold.fct_orders
+10:57:46.737787 [debug]: Started rendering model gold.fct_orders
+10:57:46.737791 [info ]: Started model gold.dim_products
+10:57:46.737794 [debug]: Started rendering model gold.dim_products
+10:57:46.737798 [info ]: Started analysis main.sample_query
+10:57:46.737801 [debug]: Started rendering analysis main.sample_query
+10:57:46.737805 [info ]: Started model gold.dim_customers
+10:57:46.737807 [debug]: Started rendering model gold.dim_customers
+10:57:46.737812 [info ]: Started model silver.silver_orders
+10:57:46.737815 [debug]: Started rendering model silver.silver_orders
+10:57:46.737818 [info ]: Started model silver.silver_products
+10:57:46.737820 [debug]: Started rendering model silver.silver_products
+10:57:46.737826 [info ]: Started model silver.silver_customers
+10:57:46.737829 [debug]: Started rendering model silver.silver_customers
+10:57:46.737834 [info ]: Started model bronze.bronze_products
+10:57:46.737836 [debug]: Started rendering model bronze.bronze_products
+10:57:46.737841 [info ]: Started seed raw_seed.raw_products
+10:57:46.737844 [debug]: Started rendering seed raw_seed.raw_products
+10:57:46.737849 [info ]: Started model bronze.bronze_orders
+10:57:46.737851 [debug]: Started rendering model bronze.bronze_orders
+10:57:46.737860 [info ]: Started seed raw_seed.raw_orders
+10:57:46.737863 [debug]: Started rendering seed raw_seed.raw_orders
+10:57:46.737868 [info ]: Started model bronze.bronze_customers
+10:57:46.737871 [debug]: Started rendering model bronze.bronze_customers
+10:57:46.737876 [info ]: Started seed raw_seed.raw_customers
+10:57:46.737878 [debug]: Started rendering seed raw_seed.raw_customers
+10:57:46.737892 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_products [success]
+10:57:46.737891 [debug]: Compiled SQL for node snapshot.dbt_databricks_learning.snapshot_customers at target/.lsp/compiled/dbt_databricks_learning/snapshots/snapshot_customers.sql/snapshot_customers.sql
+10:57:46.737899 [info ]:  Succeeded seed  raw_seed.raw_products (table) [11 of 15 in 0.00s]
+10:57:46.737909 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_orders [success]
+10:57:46.737911 [info ]:  Succeeded seed  raw_seed.raw_orders (table) [13 of 15 in 0.00s]
+10:57:46.737923 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_customers [success]
+10:57:46.737926 [info ]:  Succeeded seed  raw_seed.raw_customers (table) [15 of 15 in 0.00s]
+10:57:46.737958 [debug]: Finished rendering [  0.00s] snapshot snapshots.snapshot_customers [success]
+10:57:46.737990 [info ]: Started analyzing (11 nodes)
+10:57:46.737995 [debug]: Started analyzing snapshot snapshots.snapshot_customers
+10:57:46.737995 [debug]: Compiled SQL for node analysis.dbt_databricks_learning.sample_query at target/.lsp/compiled/dbt_databricks_learning/analyses/sample_query.sql
+10:57:46.737995 [debug]: Compiled SQL for node model.dbt_databricks_learning.fct_orders at target/.lsp/compiled/dbt_databricks_learning/models/gold/fct_orders.sql
+10:57:46.738034 [debug]: Finished rendering [  0.00s] analysis main.sample_query [success]
+10:57:46.738044 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_products at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_products.sql
+10:57:46.738050 [debug]: Compiled SQL for node model.dbt_databricks_learning.mart_customer_daily_summary at target/.lsp/compiled/dbt_databricks_learning/models/gold/mart_customer_daily_summary.sql
+10:57:46.738050 [info ]:  Succeeded analysis main.sample_query (analysis) [5 of 15 in 0.00s]
+10:57:46.738088 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_orders at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_orders.sql
+10:57:46.738088 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_customers at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_customers.sql
+10:57:46.738091 [debug]: Finished rendering [  0.00s] model gold.fct_orders [success]
+10:57:46.738106 [debug]: Started analyzing model gold.fct_orders
+10:57:46.738125 [debug]: Finished rendering [  0.00s] model gold.mart_customer_daily_summary [success]
+10:57:46.738137 [debug]: Started analyzing model gold.mart_customer_daily_summary
+10:57:46.738162 [debug]: Finished rendering [  0.00s] model gold.dim_products [success]
+10:57:46.738169 [debug]: Started analyzing model gold.dim_products
+10:57:46.738177 [debug]: Finished rendering [  0.00s] model silver.silver_orders [success]
+10:57:46.738182 [debug]: Started analyzing model silver.silver_orders
+10:57:46.738189 [debug]: Finished rendering [  0.00s] model gold.dim_customers [success]
+10:57:46.738194 [debug]: Started analyzing model gold.dim_customers
+10:57:46.738198 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_orders at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_orders.sql
+10:57:46.738199 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_products at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_products.sql
+10:57:46.738231 [debug]: Finished analyzing [  0.00s] snapshot snapshots.snapshot_customers [success]
+10:57:46.738246 [info ]:  Succeeded snapshot snapshots.snapshot_customers (snapshot) [1 of 15 in 0.00s]
+10:57:46.738273 [debug]: Finished rendering [  0.00s] model bronze.bronze_products [success]
+10:57:46.738282 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_customers at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_customers.sql
+10:57:46.738284 [debug]: Started analyzing model bronze.bronze_products
+10:57:46.738282 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_products at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_products.sql
+10:57:46.738281 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_customers at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_customers.sql
+10:57:46.738298 [debug]: Finished rendering [  0.00s] model bronze.bronze_orders [success]
+10:57:46.738305 [debug]: Started analyzing model bronze.bronze_orders
+10:57:46.738323 [debug]: Finished analyzing [  0.00s] model gold.fct_orders [success]
+10:57:46.738331 [info ]:  Succeeded model gold.fct_orders (table) [3 of 15 in 0.00s]
+10:57:46.738370 [debug]: Finished rendering [  0.00s] model bronze.bronze_customers [success]
+10:57:46.738379 [debug]: Started analyzing model bronze.bronze_customers
+10:57:46.738463 [debug]: Finished rendering [  0.00s] model silver.silver_customers [success]
+10:57:46.738482 [debug]: Started analyzing model silver.silver_customers
+10:57:46.738501 [debug]: Finished analyzing [  0.00s] model bronze.bronze_customers [success]
+10:57:46.738508 [info ]:  Succeeded model bronze.bronze_customers (view) [14 of 15 in 0.00s]
+10:57:46.738525 [debug]: Finished rendering [  0.00s] model silver.silver_products [success]
+10:57:46.738530 [info ]: Finished rendering [  0.00s] (15 nodes, 0 skipped, 0 errors)
+10:57:46.738537 [debug]: Started analyzing model silver.silver_products
+10:57:46.738555 [debug]: Finished analyzing [  0.00s] model bronze.bronze_products [success]
+10:57:46.738560 [info ]:  Succeeded model bronze.bronze_products (view) [10 of 15 in 0.00s]
+10:57:46.738775 [debug]: Finished analyzing [  0.00s] model gold.dim_products [success]
+10:57:46.738782 [info ]:  Succeeded model gold.dim_products (table) [4 of 15 in 0.00s]
+10:57:46.738791 [debug]: Finished analyzing [  0.00s] model bronze.bronze_orders [success]
+10:57:46.738795 [info ]:  Succeeded model bronze.bronze_orders (view) [12 of 15 in 0.00s]
+10:57:46.738833 [debug]: Finished analyzing [  0.00s] model silver.silver_products [success]
+10:57:46.738837 [info ]:  Succeeded model silver.silver_products (table) [8 of 15 in 0.00s]
+10:57:46.739087 [debug]: Finished analyzing [  0.00s] model silver.silver_orders [success]
+10:57:46.739092 [info ]:  Succeeded model silver.silver_orders (table) [7 of 15 in 0.00s]
+10:57:46.739125 [debug]: Finished analyzing [  0.00s] model gold.dim_customers [success]
+10:57:46.739131 [info ]:  Succeeded model gold.dim_customers (table) [6 of 15 in 0.00s]
+10:57:46.739206 [debug]: Finished analyzing [  0.00s] model silver.silver_customers [success]
+10:57:46.739213 [info ]:  Succeeded model silver.silver_customers (table) [9 of 15 in 0.00s]
+10:57:46.739228 [debug]: Finished analyzing [  0.00s] model gold.mart_customer_daily_summary [success]
+10:57:46.739233 [info ]: Finished analyzing [  0.00s] (11 nodes, 0 skipped, 0 errors)
+10:57:46.739236 [info ]:  Succeeded model gold.mart_customer_daily_summary (table) [2 of 15 in 0.00s]
+10:57:46.740877 [info ]: Started scheduling
+10:57:46.740904 [info ]: Finished scheduling [  0.00s]
+10:57:46.740931 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [74ms]
+Processed: 10 models | 1 snapshot | 3 seeds | 1 analysis
+Summary: 15 total | 15 success
+10:57:46.740962 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-11-07T10:57:48.888798Z | fb0d1d35-c18d-4a17-8bd6-4d32c9a8e351 ====================
+10:57:48.888841 [info ]: Started loading project
+10:57:48.889053 [info ]: Loading profiles.yml
+10:57:48.890628 [info ]: Finished loading project [  0.00s]
+10:57:48.899597 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [10ms]
+10:57:48.899634 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-11-07T10:57:50.084540Z | 951fd571-eb03-44e1-a6d5-aa77114ac001 ====================
+10:57:50.084623 [info ]: Started loading project
+10:57:50.085160 [info ]: Loading profiles.yml
+10:57:50.089045 [info ]: Finished loading project [  0.00s]
+10:57:50.107699 [info ]: Cached model count updated: 10 models (estimate)
+10:57:50.107729 [info ]: Cached model count updated: 10 models (accurate)
+10:57:50.107783 [info ]: Started scheduling
+10:57:50.107931 [info ]: Finished scheduling [  0.00s]
+10:57:50.107951 [debug]: Compilation - 15 nodes selected: {"analysis.dbt_databricks_learning.sample_query", "model.dbt_databricks_learning.bronze_customers", "model.dbt_databricks_learning.bronze_orders", "model.dbt_databricks_learning.bronze_products", "model.dbt_databricks_learning.dim_customers", "model.dbt_databricks_learning.dim_products", "model.dbt_databricks_learning.fct_orders", "model.dbt_databricks_learning.mart_customer_daily_summary", "model.dbt_databricks_learning.silver_customers", "model.dbt_databricks_learning.silver_orders", "model.dbt_databricks_learning.silver_products", "seed.dbt_databricks_learning.raw_customers", "seed.dbt_databricks_learning.raw_orders", "seed.dbt_databricks_learning.raw_products", "snapshot.dbt_databricks_learning.snapshot_customers"}
+10:57:50.109343 [info ]: Started building task graph
+10:57:50.109455 [info ]: Finished building task graph [  0.00s]
+10:57:50.139090 [info ]: Started rendering (15 nodes)
+10:57:50.139120 [info ]: Started snapshot snapshots.snapshot_customers
+10:57:50.139127 [debug]: Started rendering snapshot snapshots.snapshot_customers
+10:57:50.139142 [info ]: Started model gold.mart_customer_daily_summary
+10:57:50.139147 [debug]: Started rendering model gold.mart_customer_daily_summary
+10:57:50.139153 [info ]: Started model gold.fct_orders
+10:57:50.139157 [debug]: Started rendering model gold.fct_orders
+10:57:50.139162 [info ]: Started model gold.dim_products
+10:57:50.139165 [debug]: Started rendering model gold.dim_products
+10:57:50.139171 [info ]: Started analysis main.sample_query
+10:57:50.139174 [debug]: Started rendering analysis main.sample_query
+10:57:50.139179 [info ]: Started model gold.dim_customers
+10:57:50.139181 [debug]: Started rendering model gold.dim_customers
+10:57:50.139189 [info ]: Started model silver.silver_orders
+10:57:50.139192 [debug]: Started rendering model silver.silver_orders
+10:57:50.139214 [info ]: Started model silver.silver_products
+10:57:50.139223 [debug]: Started rendering model silver.silver_products
+10:57:50.139233 [info ]: Started model silver.silver_customers
+10:57:50.139237 [debug]: Started rendering model silver.silver_customers
+10:57:50.139244 [info ]: Started model bronze.bronze_products
+10:57:50.139248 [debug]: Started rendering model bronze.bronze_products
+10:57:50.139256 [info ]: Started seed raw_seed.raw_products
+10:57:50.139259 [debug]: Started rendering seed raw_seed.raw_products
+10:57:50.139265 [info ]: Started model bronze.bronze_orders
+10:57:50.139268 [debug]: Started rendering model bronze.bronze_orders
+10:57:50.139274 [info ]: Started seed raw_seed.raw_orders
+10:57:50.139278 [debug]: Started rendering seed raw_seed.raw_orders
+10:57:50.139283 [info ]: Started model bronze.bronze_customers
+10:57:50.139287 [debug]: Started rendering model bronze.bronze_customers
+10:57:50.139293 [info ]: Started seed raw_seed.raw_customers
+10:57:50.139297 [debug]: Started rendering seed raw_seed.raw_customers
+10:57:50.139309 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_products [success]
+10:57:50.139317 [info ]:  Succeeded seed  raw_seed.raw_products (table) [11 of 15 in 0.00s]
+10:57:50.139326 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_orders [success]
+10:57:50.139329 [info ]:  Succeeded seed  raw_seed.raw_orders (table) [13 of 15 in 0.00s]
+10:57:50.139340 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_customers [success]
+10:57:50.139342 [info ]:  Succeeded seed  raw_seed.raw_customers (table) [15 of 15 in 0.00s]
+10:57:50.139393 [debug]: Compiled SQL for node model.dbt_databricks_learning.mart_customer_daily_summary at target/.lsp/compiled/dbt_databricks_learning/models/gold/mart_customer_daily_summary.sql
+10:57:50.139415 [debug]: Compiled SQL for node snapshot.dbt_databricks_learning.snapshot_customers at target/.lsp/compiled/dbt_databricks_learning/snapshots/snapshot_customers.sql/snapshot_customers.sql
+10:57:50.139438 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_products at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_products.sql
+10:57:50.139437 [debug]: Compiled SQL for node model.dbt_databricks_learning.fct_orders at target/.lsp/compiled/dbt_databricks_learning/models/gold/fct_orders.sql
+10:57:50.139460 [debug]: Finished rendering [  0.00s] model gold.mart_customer_daily_summary [success]
+10:57:50.139481 [info ]: Started analyzing (11 nodes)
+10:57:50.139489 [debug]: Started analyzing model gold.mart_customer_daily_summary
+10:57:50.139469 [debug]: Compiled SQL for node analysis.dbt_databricks_learning.sample_query at target/.lsp/compiled/dbt_databricks_learning/analyses/sample_query.sql
+10:57:50.139508 [debug]: Finished rendering [  0.00s] snapshot snapshots.snapshot_customers [success]
+10:57:50.139523 [debug]: Started analyzing snapshot snapshots.snapshot_customers
+10:57:50.139533 [debug]: Finished rendering [  0.00s] model gold.dim_products [success]
+10:57:50.139540 [debug]: Started analyzing model gold.dim_products
+10:57:50.139551 [debug]: Finished rendering [  0.00s] model gold.fct_orders [success]
+10:57:50.139559 [debug]: Started analyzing model gold.fct_orders
+10:57:50.139570 [debug]: Finished rendering [  0.00s] analysis main.sample_query [success]
+10:57:50.139575 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_customers at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_customers.sql
+10:57:50.139581 [info ]:  Succeeded analysis main.sample_query (analysis) [5 of 15 in 0.00s]
+10:57:50.139602 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_customers at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_customers.sql
+10:57:50.139616 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_orders at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_orders.sql
+10:57:50.139622 [debug]: Finished rendering [  0.00s] model gold.dim_customers [success]
+10:57:50.139625 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_products at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_products.sql
+10:57:50.139632 [debug]: Started analyzing model gold.dim_customers
+10:57:50.139664 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_products at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_products.sql
+10:57:50.139677 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_orders at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_orders.sql
+10:57:50.139689 [debug]: Finished analyzing [  0.00s] snapshot snapshots.snapshot_customers [success]
+10:57:50.139696 [info ]:  Succeeded snapshot snapshots.snapshot_customers (snapshot) [1 of 15 in 0.00s]
+10:57:50.139719 [debug]: Finished rendering [  0.00s] model silver.silver_customers [success]
+10:57:50.139740 [debug]: Started analyzing model silver.silver_customers
+10:57:50.139750 [debug]: Finished rendering [  0.00s] model silver.silver_orders [success]
+10:57:50.139755 [debug]: Started analyzing model silver.silver_orders
+10:57:50.139753 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_customers at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_customers.sql
+10:57:50.139760 [debug]: Finished rendering [  0.00s] model silver.silver_products [success]
+10:57:50.139765 [debug]: Started analyzing model silver.silver_products
+10:57:50.139771 [debug]: Finished rendering [  0.00s] model bronze.bronze_products [success]
+10:57:50.139774 [debug]: Started analyzing model bronze.bronze_products
+10:57:50.139779 [debug]: Finished rendering [  0.00s] model bronze.bronze_orders [success]
+10:57:50.139782 [debug]: Started analyzing model bronze.bronze_orders
+10:57:50.139788 [debug]: Finished analyzing [  0.00s] model gold.fct_orders [success]
+10:57:50.139792 [info ]:  Succeeded model gold.fct_orders (table) [3 of 15 in 0.00s]
+10:57:50.139799 [debug]: Finished rendering [  0.00s] model bronze.bronze_customers [success]
+10:57:50.139802 [info ]: Finished rendering [  0.00s] (15 nodes, 0 skipped, 0 errors)
+10:57:50.139805 [debug]: Started analyzing model bronze.bronze_customers
+10:57:50.139891 [debug]: Finished analyzing [  0.00s] model bronze.bronze_products [success]
+10:57:50.139919 [info ]:  Succeeded model bronze.bronze_products (view) [10 of 15 in 0.00s]
+10:57:50.139936 [debug]: Finished analyzing [  0.00s] model bronze.bronze_customers [success]
+10:57:50.139943 [info ]:  Succeeded model bronze.bronze_customers (view) [14 of 15 in 0.00s]
+10:57:50.140014 [debug]: Finished analyzing [  0.00s] model silver.silver_products [success]
+10:57:50.140026 [info ]:  Succeeded model silver.silver_products (table) [8 of 15 in 0.00s]
+10:57:50.140152 [debug]: Finished analyzing [  0.00s] model bronze.bronze_orders [success]
+10:57:50.140158 [info ]:  Succeeded model bronze.bronze_orders (view) [12 of 15 in 0.00s]
+10:57:50.140253 [debug]: Finished analyzing [  0.00s] model gold.dim_products [success]
+10:57:50.140261 [info ]:  Succeeded model gold.dim_products (table) [4 of 15 in 0.00s]
+10:57:50.140309 [debug]: Finished analyzing [  0.00s] model gold.mart_customer_daily_summary [success]
+10:57:50.140316 [info ]:  Succeeded model gold.mart_customer_daily_summary (table) [2 of 15 in 0.00s]
+10:57:50.140524 [debug]: Finished analyzing [  0.00s] model silver.silver_orders [success]
+10:57:50.140528 [info ]:  Succeeded model silver.silver_orders (table) [7 of 15 in 0.00s]
+10:57:50.140544 [debug]: Finished analyzing [  0.00s] model silver.silver_customers [success]
+10:57:50.140548 [info ]:  Succeeded model silver.silver_customers (table) [9 of 15 in 0.00s]
+10:57:50.140675 [debug]: Finished analyzing [  0.00s] model gold.dim_customers [success]
+10:57:50.140681 [info ]: Finished analyzing [  0.00s] (11 nodes, 0 skipped, 0 errors)
+10:57:50.140684 [info ]:  Succeeded model gold.dim_customers (table) [6 of 15 in 0.00s]
+10:57:50.144754 [info ]: Started scheduling
+10:57:50.144781 [info ]: Finished scheduling [  0.00s]
+10:57:50.144808 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [60ms]
+Processed: 10 models | 1 snapshot | 3 seeds | 1 analysis
+Summary: 15 total | 15 success
+10:57:50.144841 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-11-07T11:00:20.652197Z | 813d032d-2c53-4b6d-868f-355a3cefeea1 ====================
+11:00:20.652246 [info ]: Started loading project
+11:00:20.652451 [info ]: Loading profiles.yml
+11:00:20.654183 [info ]: Finished loading project [  0.00s]
+11:00:20.662818 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [10ms]
+11:00:20.662851 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-11-07T11:00:21.849949Z | 5a0f95ac-60b9-451b-8c3c-f8b87b902c4d ====================
+11:00:21.850002 [info ]: Started loading project
+11:00:21.850403 [info ]: Loading profiles.yml
+11:00:21.853690 [info ]: Finished loading project [  0.00s]
+11:00:21.867606 [info ]: Cached model count updated: 10 models (estimate)
+11:00:21.867632 [info ]: Cached model count updated: 10 models (accurate)
+11:00:21.867662 [info ]: Started scheduling
+11:00:21.867770 [info ]: Finished scheduling [  0.00s]
+11:00:21.867783 [debug]: Compilation - 15 nodes selected: {"analysis.dbt_databricks_learning.sample_query", "model.dbt_databricks_learning.bronze_customers", "model.dbt_databricks_learning.bronze_orders", "model.dbt_databricks_learning.bronze_products", "model.dbt_databricks_learning.dim_customers", "model.dbt_databricks_learning.dim_products", "model.dbt_databricks_learning.fct_orders", "model.dbt_databricks_learning.mart_customer_daily_summary", "model.dbt_databricks_learning.silver_customers", "model.dbt_databricks_learning.silver_orders", "model.dbt_databricks_learning.silver_products", "seed.dbt_databricks_learning.raw_customers", "seed.dbt_databricks_learning.raw_orders", "seed.dbt_databricks_learning.raw_products", "snapshot.dbt_databricks_learning.snapshot_customers"}
+11:00:21.868750 [info ]: Started building task graph
+11:00:21.868829 [info ]: Finished building task graph [  0.00s]
+11:00:21.902738 [info ]: Started rendering (15 nodes)
+11:00:21.902754 [info ]: Started snapshot snapshots.snapshot_customers
+11:00:21.902759 [debug]: Started rendering snapshot snapshots.snapshot_customers
+11:00:21.902772 [info ]: Started model gold.mart_customer_daily_summary
+11:00:21.902775 [debug]: Started rendering model gold.mart_customer_daily_summary
+11:00:21.902780 [info ]: Started model gold.fct_orders
+11:00:21.902783 [debug]: Started rendering model gold.fct_orders
+11:00:21.902787 [info ]: Started model gold.dim_products
+11:00:21.902790 [debug]: Started rendering model gold.dim_products
+11:00:21.902794 [info ]: Started analysis main.sample_query
+11:00:21.902797 [debug]: Started rendering analysis main.sample_query
+11:00:21.902801 [info ]: Started model gold.dim_customers
+11:00:21.902805 [debug]: Started rendering model gold.dim_customers
+11:00:21.902809 [info ]: Started model silver.silver_orders
+11:00:21.902811 [debug]: Started rendering model silver.silver_orders
+11:00:21.902817 [info ]: Started model silver.silver_products
+11:00:21.902820 [debug]: Started rendering model silver.silver_products
+11:00:21.902827 [info ]: Started model silver.silver_customers
+11:00:21.902830 [debug]: Started rendering model silver.silver_customers
+11:00:21.902835 [info ]: Started model bronze.bronze_products
+11:00:21.902839 [debug]: Started rendering model bronze.bronze_products
+11:00:21.902844 [info ]: Started seed raw_seed.raw_products
+11:00:21.902846 [debug]: Started rendering seed raw_seed.raw_products
+11:00:21.902851 [info ]: Started model bronze.bronze_orders
+11:00:21.902853 [debug]: Started rendering model bronze.bronze_orders
+11:00:21.902857 [info ]: Started seed raw_seed.raw_orders
+11:00:21.902860 [debug]: Started rendering seed raw_seed.raw_orders
+11:00:21.902864 [info ]: Started model bronze.bronze_customers
+11:00:21.902866 [debug]: Started rendering model bronze.bronze_customers
+11:00:21.902870 [info ]: Started seed raw_seed.raw_customers
+11:00:21.902873 [debug]: Started rendering seed raw_seed.raw_customers
+11:00:21.902893 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_products [success]
+11:00:21.902902 [info ]:  Succeeded seed  raw_seed.raw_products (table) [11 of 15 in 0.00s]
+11:00:21.902911 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_customers [success]
+11:00:21.902914 [info ]:  Succeeded seed  raw_seed.raw_customers (table) [15 of 15 in 0.00s]
+11:00:21.902919 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_orders [success]
+11:00:21.902921 [info ]:  Succeeded seed  raw_seed.raw_orders (table) [13 of 15 in 0.00s]
+11:00:21.903094 [debug]: Compiled SQL for node snapshot.dbt_databricks_learning.snapshot_customers at target/.lsp/compiled/dbt_databricks_learning/snapshots/snapshot_customers.sql/snapshot_customers.sql
+11:00:21.903126 [debug]: Finished rendering [  0.00s] snapshot snapshots.snapshot_customers [success]
+11:00:21.903140 [info ]: Started analyzing (11 nodes)
+11:00:21.903143 [debug]: Started analyzing snapshot snapshots.snapshot_customers
+11:00:21.903246 [debug]: Finished analyzing [  0.00s] snapshot snapshots.snapshot_customers [success]
+11:00:21.903251 [info ]:  Succeeded snapshot snapshots.snapshot_customers (snapshot) [1 of 15 in 0.00s]
+11:00:21.903737 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_customers at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_customers.sql
+11:00:21.903772 [debug]: Compiled SQL for node model.dbt_databricks_learning.fct_orders at target/.lsp/compiled/dbt_databricks_learning/models/gold/fct_orders.sql
+11:00:21.903791 [debug]: Finished rendering [  0.00s] model silver.silver_customers [success]
+11:00:21.903800 [debug]: Started analyzing model silver.silver_customers
+11:00:21.903809 [debug]: Finished rendering [  0.00s] model gold.fct_orders [success]
+11:00:21.903815 [debug]: Started analyzing model gold.fct_orders
+11:00:21.903896 [debug]: Finished analyzing [  0.00s] model gold.fct_orders [success]
+11:00:21.903902 [debug]: Compiled SQL for node model.dbt_databricks_learning.mart_customer_daily_summary at target/.lsp/compiled/dbt_databricks_learning/models/gold/mart_customer_daily_summary.sql
+11:00:21.903903 [info ]:  Succeeded model gold.fct_orders (table) [3 of 15 in 0.00s]
+11:00:21.903942 [debug]: Finished rendering [  0.00s] model gold.mart_customer_daily_summary [success]
+11:00:21.903959 [debug]: Started analyzing model gold.mart_customer_daily_summary
+11:00:21.904432 [debug]: Finished analyzing [  0.00s] model silver.silver_customers [success]
+11:00:21.904439 [info ]:  Succeeded model silver.silver_customers (table) [9 of 15 in 0.00s]
+11:00:21.904528 [debug]: Finished analyzing [  0.00s] model gold.mart_customer_daily_summary [success]
+11:00:21.904533 [info ]:  Succeeded model gold.mart_customer_daily_summary (table) [2 of 15 in 0.00s]
+11:00:21.904652 [debug]: Compiled SQL for node analysis.dbt_databricks_learning.sample_query at target/.lsp/compiled/dbt_databricks_learning/analyses/sample_query.sql
+11:00:21.904713 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_customers at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_customers.sql
+11:00:21.904715 [debug]: Finished rendering [  0.00s] analysis main.sample_query [success]
+11:00:21.904731 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_orders at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_orders.sql
+11:00:21.904732 [info ]:  Succeeded analysis main.sample_query (analysis) [5 of 15 in 0.00s]
+11:00:21.904753 [debug]: Finished rendering [  0.00s] model bronze.bronze_customers [success]
+11:00:21.904766 [debug]: Started analyzing model bronze.bronze_customers
+11:00:21.904769 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_orders at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_orders.sql
+11:00:21.904787 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_customers at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_customers.sql
+11:00:21.904789 [debug]: Finished rendering [  0.00s] model bronze.bronze_orders [success]
+11:00:21.904807 [debug]: Started analyzing model bronze.bronze_orders
+11:00:21.904826 [debug]: Finished rendering [  0.00s] model silver.silver_orders [success]
+11:00:21.904832 [debug]: Started analyzing model silver.silver_orders
+11:00:21.904839 [debug]: Finished rendering [  0.00s] model gold.dim_customers [success]
+11:00:21.904841 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_products at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_products.sql
+11:00:21.904843 [debug]: Started analyzing model gold.dim_customers
+11:00:21.904871 [debug]: Finished rendering [  0.00s] model bronze.bronze_products [success]
+11:00:21.904890 [debug]: Started analyzing model bronze.bronze_products
+11:00:21.904906 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_products at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_products.sql
+11:00:21.904932 [debug]: Finished rendering [  0.00s] model gold.dim_products [success]
+11:00:21.904940 [debug]: Started analyzing model gold.dim_products
+11:00:21.904956 [debug]: Finished analyzing [  0.00s] model bronze.bronze_customers [success]
+11:00:21.904970 [info ]:  Succeeded model bronze.bronze_customers (view) [14 of 15 in 0.00s]
+11:00:21.904995 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_products at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_products.sql
+11:00:21.905016 [debug]: Finished analyzing [  0.00s] model bronze.bronze_products [success]
+11:00:21.905024 [info ]:  Succeeded model bronze.bronze_products (view) [10 of 15 in 0.00s]
+11:00:21.905040 [debug]: Finished rendering [  0.00s] model silver.silver_products [success]
+11:00:21.905046 [info ]: Finished rendering [  0.00s] (15 nodes, 0 skipped, 0 errors)
+11:00:21.905058 [debug]: Started analyzing model silver.silver_products
+11:00:21.905284 [debug]: Finished analyzing [  0.00s] model bronze.bronze_orders [success]
+11:00:21.905290 [info ]:  Succeeded model bronze.bronze_orders (view) [12 of 15 in 0.00s]
+11:00:21.905296 [debug]: Finished analyzing [  0.00s] model silver.silver_products [success]
+11:00:21.905298 [info ]:  Succeeded model silver.silver_products (table) [8 of 15 in 0.00s]
+11:00:21.905351 [debug]: Finished analyzing [  0.00s] model silver.silver_orders [success]
+11:00:21.905355 [info ]:  Succeeded model silver.silver_orders (table) [7 of 15 in 0.00s]
+11:00:21.905466 [debug]: Finished analyzing [  0.00s] model gold.dim_customers [success]
+11:00:21.905471 [info ]:  Succeeded model gold.dim_customers (table) [6 of 15 in 0.00s]
+11:00:21.905560 [debug]: Finished analyzing [  0.00s] model gold.dim_products [success]
+11:00:21.905565 [info ]: Finished analyzing [  0.00s] (11 nodes, 0 skipped, 0 errors)
+11:00:21.905567 [info ]:  Succeeded model gold.dim_products (table) [4 of 15 in 0.00s]
+11:00:21.907020 [info ]: Started scheduling
+11:00:21.907046 [info ]: Finished scheduling [  0.00s]
+11:00:21.907072 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [57ms]
+Processed: 10 models | 1 snapshot | 3 seeds | 1 analysis
+Summary: 15 total | 15 success
+11:00:21.907105 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-11-07T11:02:47.789912Z | 1652fc29-0644-40a6-b2f7-90484c752d8f ====================
+11:02:47.789978 [info ]: Started loading project
+11:02:47.790381 [info ]: Loading profiles.yml
+11:02:47.793411 [info ]: Finished loading project [  0.00s]
+==================== 2026-11-07T11:02:47.794259Z | 9a2af235-c01c-49da-81cb-4e731860d2c1 ====================
+11:02:47.794282 [info ]: Started loading project
+11:02:47.794445 [info ]: Loading profiles.yml
+11:02:47.796888 [debug]:    Started loading packages
+11:02:47.798089 [debug]:     Loaded [  0.00s] packages
+11:02:47.798614 [info ]: Finished loading project [  0.00s]
+11:02:47.798778 [info ]: Started parsing (16 nodes)
+11:02:47.815174 [debug]: Finished parsing models/bronze/bronze_sources.yml [  0.00s]
+11:02:47.815203 [debug]:    Started building model nodes
+11:02:47.815206 [debug]:    Started building model nodes
+11:02:47.815211 [debug]:   Finished [  0.00s] building model nodes
+11:02:47.815214 [debug]:   Finished [  0.00s] building model nodes
+11:02:47.815622 [debug]: Finished parsing models/gold/gold_models.yml [  0.00s]
+11:02:47.815673 [debug]:    Started resolving data tests
+11:02:47.815682 [debug]:    Started resolving data tests
+11:02:47.815693 [debug]:   Finished [  0.00s] resolving data tests
+11:02:47.815695 [debug]:   Finished [  0.00s] resolving data tests
+11:02:47.815818 [debug]: Finished parsing models/silver/silver_models.yml [  0.00s]
+11:02:47.817163 [debug]: Finished parsing snapshots/snapshot_customers.sql [  0.00s]
+11:02:47.818076 [debug]: Finished parsing models/bronze/bronze_customers.sql [  0.00s]
+11:02:47.818899 [debug]: Finished parsing models/bronze/bronze_orders.sql [  0.00s]
+11:02:47.819172 [debug]: Finished parsing models/bronze/bronze_products.sql [  0.00s]
+11:02:47.819404 [debug]: Finished parsing models/gold/dim_customers.sql [  0.00s]
+11:02:47.819631 [debug]: Finished parsing models/gold/dim_products.sql [  0.00s]
+11:02:47.819808 [debug]: Finished parsing models/gold/fct_orders.sql [  0.00s]
+11:02:47.820014 [debug]: Finished parsing models/gold/mart_customer_daily_summary.sql [  0.00s]
+11:02:47.820222 [debug]: Finished parsing models/silver/silver_customers.sql [  0.00s]
+11:02:47.820504 [debug]: Finished parsing models/silver/silver_orders.sql [  0.00s]
+11:02:47.820856 [debug]:    Started building model nodes
+11:02:47.822441 [debug]:   Finished [  0.00s] building model nodes
+11:02:47.822472 [debug]: Finished parsing models/silver/silver_products.sql [  0.00s]
+11:02:47.822933 [debug]:    Started resolving data tests
+11:02:47.822953 [debug]: Finished parsing analyses/sample_query.sql [  0.00s]
+11:02:47.823240 [debug]: Finished parsing tests/assert_order_total_is_positive.sql [  0.00s]
+11:02:47.823244 [debug]:   Finished [  0.00s] resolving data tests
+11:02:47.823398 [debug]:    Started typechecking macros
+11:02:47.874416 [debug]:   Finished [  0.05s] typechecking macros
+11:02:47.874763 [info ]: Finished parsing [  0.08s] (16 nodes, 0 skipped, 0 errors)
+11:02:47.874894 [info ]: Cached model count updated: 10 models (estimate)
+11:02:47.874900 [info ]: Cached model count updated: 10 models (accurate)
+11:02:47.874915 [info ]: Started scheduling
+11:02:47.874935 [info ]: Finished scheduling [  0.00s]
+11:02:47.874939 [debug]: Compilation - 0 nodes selected: {}
+11:02:47.874952 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+11:02:47.874960 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+11:02:47.874969 [info ]: Started scheduling
+11:02:47.875019 [info ]: Finished scheduling [  0.00s]
+11:02:47.877470 [info ]: Started building task graph
+11:02:47.877477 [info ]: Finished building task graph [  0.00s]
+11:02:47.901327 [info ]: Started scheduling
+11:02:47.901352 [info ]: Finished scheduling [  0.00s]
+11:02:47.901403 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'duckdb' [107ms]
+11:02:47.901422 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [111ms]
+11:02:47.901875 [info ]: Cached model count updated: 10 models (accurate)
+11:02:48.218886 [info ]: Loading profiles.yml
+==================== 2026-11-07T11:02:49.080677Z | 54031eef-34e3-49a7-bf9a-2695adc9df97 ====================
+11:02:49.080760 [info ]: Started loading project
+11:02:49.081227 [info ]: Loading profiles.yml
+11:02:49.085410 [info ]: Finished loading project [  0.00s]
+11:02:49.099234 [info ]: Cached model count updated: 10 models (estimate)
+11:02:49.099256 [info ]: Cached model count updated: 10 models (accurate)
+11:02:49.099293 [info ]: Started scheduling
+11:02:49.099412 [info ]: Finished scheduling [  0.00s]
+11:02:49.099427 [debug]: Compilation - 15 nodes selected: {"analysis.dbt_databricks_learning.sample_query", "model.dbt_databricks_learning.bronze_customers", "model.dbt_databricks_learning.bronze_orders", "model.dbt_databricks_learning.bronze_products", "model.dbt_databricks_learning.dim_customers", "model.dbt_databricks_learning.dim_products", "model.dbt_databricks_learning.fct_orders", "model.dbt_databricks_learning.mart_customer_daily_summary", "model.dbt_databricks_learning.silver_customers", "model.dbt_databricks_learning.silver_orders", "model.dbt_databricks_learning.silver_products", "seed.dbt_databricks_learning.raw_customers", "seed.dbt_databricks_learning.raw_orders", "seed.dbt_databricks_learning.raw_products", "snapshot.dbt_databricks_learning.snapshot_customers"}
+11:02:49.100573 [info ]: Started building task graph
+11:02:49.100654 [info ]: Finished building task graph [  0.00s]
+11:02:49.127549 [info ]: Started rendering (15 nodes)
+11:02:49.127564 [info ]: Started snapshot snapshots.snapshot_customers
+11:02:49.127570 [debug]: Started rendering snapshot snapshots.snapshot_customers
+11:02:49.127588 [info ]: Started model gold.mart_customer_daily_summary
+11:02:49.127592 [debug]: Started rendering model gold.mart_customer_daily_summary
+11:02:49.127598 [info ]: Started model gold.fct_orders
+11:02:49.127601 [debug]: Started rendering model gold.fct_orders
+11:02:49.127605 [info ]: Started model gold.dim_products
+11:02:49.127608 [debug]: Started rendering model gold.dim_products
+11:02:49.127613 [info ]: Started analysis main.sample_query
+11:02:49.127617 [debug]: Started rendering analysis main.sample_query
+11:02:49.127621 [info ]: Started model gold.dim_customers
+11:02:49.127624 [debug]: Started rendering model gold.dim_customers
+11:02:49.127628 [info ]: Started model silver.silver_orders
+11:02:49.127630 [debug]: Started rendering model silver.silver_orders
+11:02:49.127634 [info ]: Started model silver.silver_products
+11:02:49.127637 [debug]: Started rendering model silver.silver_products
+11:02:49.127642 [info ]: Started model silver.silver_customers
+11:02:49.127645 [debug]: Started rendering model silver.silver_customers
+11:02:49.127649 [info ]: Started model bronze.bronze_products
+11:02:49.127651 [debug]: Started rendering model bronze.bronze_products
+11:02:49.127657 [info ]: Started seed raw_seed.raw_products
+11:02:49.127661 [debug]: Started rendering seed raw_seed.raw_products
+11:02:49.127666 [info ]: Started model bronze.bronze_orders
+11:02:49.127668 [debug]: Started rendering model bronze.bronze_orders
+11:02:49.127672 [info ]: Started seed raw_seed.raw_orders
+11:02:49.127675 [debug]: Started rendering seed raw_seed.raw_orders
+11:02:49.127680 [info ]: Started model bronze.bronze_customers
+11:02:49.127683 [debug]: Started rendering model bronze.bronze_customers
+11:02:49.127688 [info ]: Started seed raw_seed.raw_customers
+11:02:49.127693 [debug]: Started rendering seed raw_seed.raw_customers
+11:02:49.127730 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_products [success]
+11:02:49.127740 [info ]:  Succeeded seed  raw_seed.raw_products (table) [11 of 15 in 0.00s]
+11:02:49.127755 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_orders [success]
+11:02:49.127759 [info ]:  Succeeded seed  raw_seed.raw_orders (table) [13 of 15 in 0.00s]
+11:02:49.127767 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_customers [success]
+11:02:49.127771 [info ]:  Succeeded seed  raw_seed.raw_customers (table) [15 of 15 in 0.00s]
+11:02:49.128103 [debug]: Compiled SQL for node model.dbt_databricks_learning.mart_customer_daily_summary at target/.lsp/compiled/dbt_databricks_learning/models/gold/mart_customer_daily_summary.sql
+11:02:49.128164 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_products at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_products.sql
+11:02:49.128169 [debug]: Finished rendering [  0.00s] model gold.mart_customer_daily_summary [success]
+11:02:49.128194 [debug]: Compiled SQL for node snapshot.dbt_databricks_learning.snapshot_customers at target/.lsp/compiled/dbt_databricks_learning/snapshots/snapshot_customers.sql/snapshot_customers.sql
+11:02:49.128201 [info ]: Started analyzing (11 nodes)
+11:02:49.128218 [debug]: Started analyzing model gold.mart_customer_daily_summary
+11:02:49.128231 [debug]: Finished rendering [  0.00s] model gold.dim_products [success]
+11:02:49.128240 [debug]: Started analyzing model gold.dim_products
+11:02:49.128249 [debug]: Finished rendering [  0.00s] snapshot snapshots.snapshot_customers [success]
+11:02:49.128258 [debug]: Started analyzing snapshot snapshots.snapshot_customers
+11:02:49.128351 [debug]: Compiled SQL for node model.dbt_databricks_learning.fct_orders at target/.lsp/compiled/dbt_databricks_learning/models/gold/fct_orders.sql
+11:02:49.128392 [debug]: Finished analyzing [  0.00s] snapshot snapshots.snapshot_customers [success]
+11:02:49.128407 [info ]:  Succeeded snapshot snapshots.snapshot_customers (snapshot) [1 of 15 in 0.00s]
+11:02:49.128435 [debug]: Finished rendering [  0.00s] model gold.fct_orders [success]
+11:02:49.128455 [debug]: Started analyzing model gold.fct_orders
+11:02:49.128571 [debug]: Finished analyzing [  0.00s] model gold.fct_orders [success]
+11:02:49.128581 [info ]:  Succeeded model gold.fct_orders (table) [3 of 15 in 0.00s]
+11:02:49.128585 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_orders at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_orders.sql
+11:02:49.128622 [debug]: Finished rendering [  0.00s] model silver.silver_orders [success]
+11:02:49.128630 [debug]: Started analyzing model silver.silver_orders
+11:02:49.128664 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_customers at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_customers.sql
+11:02:49.128712 [debug]: Finished rendering [  0.00s] model gold.dim_customers [success]
+11:02:49.128719 [debug]: Started analyzing model gold.dim_customers
+11:02:49.128770 [debug]: Compiled SQL for node analysis.dbt_databricks_learning.sample_query at target/.lsp/compiled/dbt_databricks_learning/analyses/sample_query.sql
+11:02:49.128835 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_products at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_products.sql
+11:02:49.128835 [debug]: Finished rendering [  0.00s] analysis main.sample_query [success]
+11:02:49.128848 [info ]:  Succeeded analysis main.sample_query (analysis) [5 of 15 in 0.00s]
+11:02:49.128887 [debug]: Finished rendering [  0.00s] model silver.silver_products [success]
+11:02:49.128900 [debug]: Started analyzing model silver.silver_products
+11:02:49.128919 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_orders at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_orders.sql
+11:02:49.128965 [debug]: Finished rendering [  0.00s] model bronze.bronze_orders [success]
+11:02:49.128975 [debug]: Started analyzing model bronze.bronze_orders
+11:02:49.129162 [debug]: Finished analyzing [  0.00s] model silver.silver_products [success]
+11:02:49.129174 [info ]:  Succeeded model silver.silver_products (table) [8 of 15 in 0.00s]
+11:02:49.129184 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_customers at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_customers.sql
+11:02:49.129209 [debug]: Finished analyzing [  0.00s] model gold.dim_products [success]
+11:02:49.129219 [info ]:  Succeeded model gold.dim_products (table) [4 of 15 in 0.00s]
+11:02:49.129274 [debug]: Finished rendering [  0.00s] model bronze.bronze_customers [success]
+11:02:49.129282 [debug]: Started analyzing model bronze.bronze_customers
+11:02:49.129346 [debug]: Finished analyzing [  0.00s] model bronze.bronze_customers [success]
+11:02:49.129367 [info ]:  Succeeded model bronze.bronze_customers (view) [14 of 15 in 0.00s]
+11:02:49.129391 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_products at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_products.sql
+11:02:49.129396 [debug]: Finished analyzing [  0.00s] model gold.mart_customer_daily_summary [success]
+11:02:49.129407 [info ]:  Succeeded model gold.mart_customer_daily_summary (table) [2 of 15 in 0.00s]
+11:02:49.129434 [debug]: Finished rendering [  0.00s] model bronze.bronze_products [success]
+11:02:49.129442 [debug]: Started analyzing model bronze.bronze_products
+11:02:49.129450 [debug]: Finished analyzing [  0.00s] model bronze.bronze_orders [success]
+11:02:49.129454 [info ]:  Succeeded model bronze.bronze_orders (view) [12 of 15 in 0.00s]
+11:02:49.129496 [debug]: Finished analyzing [  0.00s] model silver.silver_orders [success]
+11:02:49.129502 [info ]:  Succeeded model silver.silver_orders (table) [7 of 15 in 0.00s]
+11:02:49.129515 [debug]: Finished analyzing [  0.00s] model bronze.bronze_products [success]
+11:02:49.129519 [info ]:  Succeeded model bronze.bronze_products (view) [10 of 15 in 0.00s]
+11:02:49.129519 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_customers at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_customers.sql
+11:02:49.129588 [debug]: Finished rendering [  0.00s] model silver.silver_customers [success]
+11:02:49.129593 [info ]: Finished rendering [  0.00s] (15 nodes, 0 skipped, 0 errors)
+11:02:49.129598 [debug]: Started analyzing model silver.silver_customers
+11:02:49.129608 [debug]: Finished analyzing [  0.00s] model gold.dim_customers [success]
+11:02:49.129612 [info ]:  Succeeded model gold.dim_customers (table) [6 of 15 in 0.00s]
+11:02:49.130228 [debug]: Finished analyzing [  0.00s] model silver.silver_customers [success]
+11:02:49.130232 [info ]: Finished analyzing [  0.00s] (11 nodes, 0 skipped, 0 errors)
+11:02:49.130235 [info ]:  Succeeded model silver.silver_customers (table) [9 of 15 in 0.00s]
+11:02:49.131965 [info ]: Started scheduling
+11:02:49.131996 [info ]: Finished scheduling [  0.00s]
+11:02:49.132028 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [51ms]
+Processed: 10 models | 1 snapshot | 3 seeds | 1 analysis
+Summary: 15 total | 15 success
+11:02:49.132067 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-11-07T11:03:11.255206Z | 0e6ace4f-3cd7-40bd-9280-4a34523923f7 ====================
+11:03:11.255266 [info ]: Started loading project
+11:03:11.255553 [info ]: Loading profiles.yml
+11:03:11.258174 [info ]: Finished loading project [  0.00s]
+11:03:11.269513 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [14ms]
+11:03:11.269553 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-11-07T11:03:12.451843Z | 253d8a24-430b-46e3-903d-8e49d053c99d ====================
+11:03:12.451924 [info ]: Started loading project
+11:03:12.452443 [info ]: Loading profiles.yml
+11:03:12.456017 [info ]: Finished loading project [  0.00s]
+11:03:12.468066 [info ]: Cached model count updated: 10 models (estimate)
+11:03:12.468082 [info ]: Cached model count updated: 10 models (accurate)
+11:03:12.468111 [info ]: Started scheduling
+11:03:12.468225 [info ]: Finished scheduling [  0.00s]
+11:03:12.468238 [debug]: Compilation - 15 nodes selected: {"analysis.dbt_databricks_learning.sample_query", "model.dbt_databricks_learning.bronze_customers", "model.dbt_databricks_learning.bronze_orders", "model.dbt_databricks_learning.bronze_products", "model.dbt_databricks_learning.dim_customers", "model.dbt_databricks_learning.dim_products", "model.dbt_databricks_learning.fct_orders", "model.dbt_databricks_learning.mart_customer_daily_summary", "model.dbt_databricks_learning.silver_customers", "model.dbt_databricks_learning.silver_orders", "model.dbt_databricks_learning.silver_products", "seed.dbt_databricks_learning.raw_customers", "seed.dbt_databricks_learning.raw_orders", "seed.dbt_databricks_learning.raw_products", "snapshot.dbt_databricks_learning.snapshot_customers"}
+11:03:12.469673 [info ]: Started building task graph
+11:03:12.469754 [info ]: Finished building task graph [  0.00s]
+11:03:12.503231 [info ]: Started rendering (15 nodes)
+11:03:12.503246 [info ]: Started snapshot snapshots.snapshot_customers
+11:03:12.503252 [debug]: Started rendering snapshot snapshots.snapshot_customers
+11:03:12.503266 [info ]: Started model gold.mart_customer_daily_summary
+11:03:12.503270 [debug]: Started rendering model gold.mart_customer_daily_summary
+11:03:12.503274 [info ]: Started model gold.fct_orders
+11:03:12.503277 [debug]: Started rendering model gold.fct_orders
+11:03:12.503281 [info ]: Started model gold.dim_products
+11:03:12.503284 [debug]: Started rendering model gold.dim_products
+11:03:12.503289 [info ]: Started analysis main.sample_query
+11:03:12.503292 [debug]: Started rendering analysis main.sample_query
+11:03:12.503296 [info ]: Started model gold.dim_customers
+11:03:12.503299 [debug]: Started rendering model gold.dim_customers
+11:03:12.503303 [info ]: Started model silver.silver_orders
+11:03:12.503306 [debug]: Started rendering model silver.silver_orders
+11:03:12.503310 [info ]: Started model silver.silver_products
+11:03:12.503313 [debug]: Started rendering model silver.silver_products
+11:03:12.503317 [info ]: Started model silver.silver_customers
+11:03:12.503322 [debug]: Started rendering model silver.silver_customers
+11:03:12.503330 [info ]: Started model bronze.bronze_products
+11:03:12.503333 [debug]: Started rendering model bronze.bronze_products
+11:03:12.503339 [info ]: Started seed raw_seed.raw_products
+11:03:12.503341 [debug]: Started rendering seed raw_seed.raw_products
+11:03:12.503346 [info ]: Started model bronze.bronze_orders
+11:03:12.503348 [debug]: Started rendering model bronze.bronze_orders
+11:03:12.503354 [info ]: Started seed raw_seed.raw_orders
+11:03:12.503357 [debug]: Started rendering seed raw_seed.raw_orders
+11:03:12.503361 [info ]: Started model bronze.bronze_customers
+11:03:12.503364 [debug]: Started rendering model bronze.bronze_customers
+11:03:12.503369 [info ]: Started seed raw_seed.raw_customers
+11:03:12.503372 [debug]: Started rendering seed raw_seed.raw_customers
+11:03:12.503386 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_products [success]
+11:03:12.503393 [info ]:  Succeeded seed  raw_seed.raw_products (table) [11 of 15 in 0.00s]
+11:03:12.503402 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_orders [success]
+11:03:12.503404 [info ]:  Succeeded seed  raw_seed.raw_orders (table) [13 of 15 in 0.00s]
+11:03:12.503431 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_customers [success]
+11:03:12.503435 [info ]:  Succeeded seed  raw_seed.raw_customers (table) [15 of 15 in 0.00s]
+11:03:12.503587 [debug]: Compiled SQL for node snapshot.dbt_databricks_learning.snapshot_customers at target/.lsp/compiled/dbt_databricks_learning/snapshots/snapshot_customers.sql/snapshot_customers.sql
+11:03:12.503605 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_products at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_products.sql
+11:03:12.503614 [debug]: Compiled SQL for node model.dbt_databricks_learning.fct_orders at target/.lsp/compiled/dbt_databricks_learning/models/gold/fct_orders.sql
+11:03:12.503639 [debug]: Finished rendering [  0.00s] snapshot snapshots.snapshot_customers [success]
+11:03:12.503642 [debug]: Compiled SQL for node model.dbt_databricks_learning.mart_customer_daily_summary at target/.lsp/compiled/dbt_databricks_learning/models/gold/mart_customer_daily_summary.sql
+11:03:12.503678 [info ]: Started analyzing (11 nodes)
+11:03:12.503682 [debug]: Started analyzing snapshot snapshots.snapshot_customers
+11:03:12.503694 [debug]: Finished rendering [  0.00s] model gold.dim_products [success]
+11:03:12.503700 [debug]: Started analyzing model gold.dim_products
+11:03:12.503707 [debug]: Finished rendering [  0.00s] model gold.fct_orders [success]
+11:03:12.503711 [debug]: Started analyzing model gold.fct_orders
+11:03:12.503731 [debug]: Finished rendering [  0.00s] model gold.mart_customer_daily_summary [success]
+11:03:12.503747 [debug]: Started analyzing model gold.mart_customer_daily_summary
+11:03:12.503822 [debug]: Compiled SQL for node analysis.dbt_databricks_learning.sample_query at target/.lsp/compiled/dbt_databricks_learning/analyses/sample_query.sql
+11:03:12.503849 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_customers at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_customers.sql
+11:03:12.503859 [debug]: Finished analyzing [  0.00s] snapshot snapshots.snapshot_customers [success]
+11:03:12.503872 [info ]:  Succeeded snapshot snapshots.snapshot_customers (snapshot) [1 of 15 in 0.00s]
+11:03:12.503878 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_orders at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_orders.sql
+11:03:12.503892 [debug]: Finished rendering [  0.00s] analysis main.sample_query [success]
+11:03:12.503899 [info ]:  Succeeded analysis main.sample_query (analysis) [5 of 15 in 0.00s]
+11:03:12.503923 [debug]: Finished analyzing [  0.00s] model gold.fct_orders [success]
+11:03:12.503930 [info ]:  Succeeded model gold.fct_orders (table) [3 of 15 in 0.00s]
+11:03:12.503923 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_products at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_products.sql
+11:03:12.503936 [debug]: Finished rendering [  0.00s] model gold.dim_customers [success]
+11:03:12.503942 [debug]: Started analyzing model gold.dim_customers
+11:03:12.503965 [debug]: Finished rendering [  0.00s] model silver.silver_orders [success]
+11:03:12.503980 [debug]: Started analyzing model silver.silver_orders
+11:03:12.503994 [debug]: Finished rendering [  0.00s] model silver.silver_products [success]
+11:03:12.504002 [debug]: Started analyzing model silver.silver_products
+11:03:12.504045 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_customers at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_customers.sql
+11:03:12.504064 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_orders at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_orders.sql
+11:03:12.504098 [debug]: Finished rendering [  0.00s] model silver.silver_customers [success]
+11:03:12.504105 [debug]: Started analyzing model silver.silver_customers
+11:03:12.504114 [debug]: Finished rendering [  0.00s] model bronze.bronze_orders [success]
+11:03:12.504102 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_products at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_products.sql
+11:03:12.504117 [debug]: Started analyzing model bronze.bronze_orders
+11:03:12.504171 [debug]: Finished rendering [  0.00s] model bronze.bronze_products [success]
+11:03:12.504177 [debug]: Started analyzing model bronze.bronze_products
+11:03:12.504224 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_customers at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_customers.sql
+11:03:12.504264 [debug]: Finished analyzing [  0.00s] model bronze.bronze_products [success]
+11:03:12.504268 [info ]:  Succeeded model bronze.bronze_products (view) [10 of 15 in 0.00s]
+11:03:12.504289 [debug]: Finished rendering [  0.00s] model bronze.bronze_customers [success]
+11:03:12.504291 [info ]: Finished rendering [  0.00s] (15 nodes, 0 skipped, 0 errors)
+11:03:12.504296 [debug]: Started analyzing model bronze.bronze_customers
+11:03:12.504303 [debug]: Finished analyzing [  0.00s] model silver.silver_products [success]
+11:03:12.504306 [info ]:  Succeeded model silver.silver_products (table) [8 of 15 in 0.00s]
+11:03:12.504356 [debug]: Finished analyzing [  0.00s] model bronze.bronze_customers [success]
+11:03:12.504359 [info ]:  Succeeded model bronze.bronze_customers (view) [14 of 15 in 0.00s]
+11:03:12.504526 [debug]: Finished analyzing [  0.00s] model bronze.bronze_orders [success]
+11:03:12.504532 [info ]:  Succeeded model bronze.bronze_orders (view) [12 of 15 in 0.00s]
+11:03:12.504568 [debug]: Finished analyzing [  0.00s] model gold.dim_products [success]
+11:03:12.504584 [info ]:  Succeeded model gold.dim_products (table) [4 of 15 in 0.00s]
+11:03:12.504606 [debug]: Finished analyzing [  0.00s] model gold.dim_customers [success]
+11:03:12.504624 [info ]:  Succeeded model gold.dim_customers (table) [6 of 15 in 0.00s]
+11:03:12.504769 [debug]: Finished analyzing [  0.00s] model gold.mart_customer_daily_summary [success]
+11:03:12.504774 [info ]:  Succeeded model gold.mart_customer_daily_summary (table) [2 of 15 in 0.00s]
+11:03:12.504781 [debug]: Finished analyzing [  0.00s] model silver.silver_orders [success]
+11:03:12.504784 [info ]:  Succeeded model silver.silver_orders (table) [7 of 15 in 0.00s]
+11:03:12.504799 [debug]: Finished analyzing [  0.00s] model silver.silver_customers [success]
+11:03:12.504802 [info ]: Finished analyzing [  0.00s] (11 nodes, 0 skipped, 0 errors)
+11:03:12.504804 [info ]:  Succeeded model silver.silver_customers (table) [9 of 15 in 0.00s]
+11:03:12.506257 [info ]: Started scheduling
+11:03:12.506283 [info ]: Finished scheduling [  0.00s]
+11:03:12.506309 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [54ms]
+Processed: 10 models | 1 snapshot | 3 seeds | 1 analysis
+Summary: 15 total | 15 success
+11:03:12.506342 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-11-07T11:03:12.612017Z | b939e2a3-9fcf-465b-9f82-0acca70cf366 ====================
+11:03:12.612065 [info ]: Started loading project
+11:03:12.612373 [info ]: Loading profiles.yml
+11:03:12.614803 [info ]: Finished loading project [  0.00s]
+11:03:12.625258 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [13ms]
+11:03:12.625290 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-11-07T11:03:13.803286Z | 766af537-306e-4d60-bdb3-af8b526b381e ====================
+11:03:13.803380 [info ]: Started loading project
+11:03:13.804026 [info ]: Loading profiles.yml
+11:03:13.806171 [info ]: Finished loading project [  0.00s]
+11:03:13.818534 [info ]: Cached model count updated: 10 models (estimate)
+11:03:13.818554 [info ]: Cached model count updated: 10 models (accurate)
+11:03:13.818581 [info ]: Started scheduling
+11:03:13.818656 [info ]: Finished scheduling [  0.00s]
+11:03:13.818665 [debug]: Compilation - 15 nodes selected: {"analysis.dbt_databricks_learning.sample_query", "model.dbt_databricks_learning.bronze_customers", "model.dbt_databricks_learning.bronze_orders", "model.dbt_databricks_learning.bronze_products", "model.dbt_databricks_learning.dim_customers", "model.dbt_databricks_learning.dim_products", "model.dbt_databricks_learning.fct_orders", "model.dbt_databricks_learning.mart_customer_daily_summary", "model.dbt_databricks_learning.silver_customers", "model.dbt_databricks_learning.silver_orders", "model.dbt_databricks_learning.silver_products", "seed.dbt_databricks_learning.raw_customers", "seed.dbt_databricks_learning.raw_orders", "seed.dbt_databricks_learning.raw_products", "snapshot.dbt_databricks_learning.snapshot_customers"}
+11:03:13.819305 [info ]: Started building task graph
+11:03:13.819364 [info ]: Finished building task graph [  0.00s]
+11:03:13.840319 [info ]: Started rendering (15 nodes)
+11:03:13.840334 [info ]: Started snapshot snapshots.snapshot_customers
+11:03:13.840340 [debug]: Started rendering snapshot snapshots.snapshot_customers
+11:03:13.840355 [info ]: Started model gold.mart_customer_daily_summary
+11:03:13.840360 [debug]: Started rendering model gold.mart_customer_daily_summary
+11:03:13.840365 [info ]: Started model gold.fct_orders
+11:03:13.840369 [debug]: Started rendering model gold.fct_orders
+11:03:13.840373 [info ]: Started model gold.dim_products
+11:03:13.840376 [debug]: Started rendering model gold.dim_products
+11:03:13.840382 [info ]: Started analysis main.sample_query
+11:03:13.840385 [debug]: Started rendering analysis main.sample_query
+11:03:13.840390 [info ]: Started model gold.dim_customers
+11:03:13.840393 [debug]: Started rendering model gold.dim_customers
+11:03:13.840398 [info ]: Started model silver.silver_orders
+11:03:13.840401 [debug]: Started rendering model silver.silver_orders
+11:03:13.840408 [info ]: Started model silver.silver_products
+11:03:13.840411 [debug]: Started rendering model silver.silver_products
+11:03:13.840417 [info ]: Started model silver.silver_customers
+11:03:13.840421 [debug]: Started rendering model silver.silver_customers
+11:03:13.840425 [info ]: Started model bronze.bronze_products
+11:03:13.840429 [debug]: Started rendering model bronze.bronze_products
+11:03:13.840436 [info ]: Started seed raw_seed.raw_products
+11:03:13.840439 [debug]: Started rendering seed raw_seed.raw_products
+11:03:13.840445 [info ]: Started model bronze.bronze_orders
+11:03:13.840448 [debug]: Started rendering model bronze.bronze_orders
+11:03:13.840454 [info ]: Started seed raw_seed.raw_orders
+11:03:13.840457 [debug]: Started rendering seed raw_seed.raw_orders
+11:03:13.840462 [info ]: Started model bronze.bronze_customers
+11:03:13.840465 [debug]: Started rendering model bronze.bronze_customers
+11:03:13.840471 [info ]: Started seed raw_seed.raw_customers
+11:03:13.840477 [debug]: Started rendering seed raw_seed.raw_customers
+11:03:13.840479 [debug]: Compiled SQL for node snapshot.dbt_databricks_learning.snapshot_customers at target/.lsp/compiled/dbt_databricks_learning/snapshots/snapshot_customers.sql/snapshot_customers.sql
+11:03:13.840492 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_orders [success]
+11:03:13.840499 [info ]:  Succeeded seed  raw_seed.raw_orders (table) [13 of 15 in 0.00s]
+11:03:13.840508 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_products [success]
+11:03:13.840511 [info ]:  Succeeded seed  raw_seed.raw_products (table) [11 of 15 in 0.00s]
+11:03:13.840524 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_customers [success]
+11:03:13.840527 [info ]:  Succeeded seed  raw_seed.raw_customers (table) [15 of 15 in 0.00s]
+11:03:13.840531 [debug]: Finished rendering [  0.00s] snapshot snapshots.snapshot_customers [success]
+11:03:13.840542 [info ]: Started analyzing (11 nodes)
+11:03:13.840544 [debug]: Started analyzing snapshot snapshots.snapshot_customers
+11:03:13.840606 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_products at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_products.sql
+11:03:13.840613 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_products at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_products.sql
+11:03:13.840649 [debug]: Finished rendering [  0.00s] model silver.silver_products [success]
+11:03:13.840672 [debug]: Started analyzing model silver.silver_products
+11:03:13.840675 [debug]: Compiled SQL for node model.dbt_databricks_learning.fct_orders at target/.lsp/compiled/dbt_databricks_learning/models/gold/fct_orders.sql
+11:03:13.840675 [debug]: Compiled SQL for node model.dbt_databricks_learning.mart_customer_daily_summary at target/.lsp/compiled/dbt_databricks_learning/models/gold/mart_customer_daily_summary.sql
+11:03:13.840691 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_products at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_products.sql
+11:03:13.840692 [debug]: Finished rendering [  0.00s] model gold.dim_products [success]
+11:03:13.840693 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_customers at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_customers.sql
+11:03:13.840703 [debug]: Started analyzing model gold.dim_products
+11:03:13.840720 [debug]: Finished analyzing [  0.00s] snapshot snapshots.snapshot_customers [success]
+11:03:13.840766 [info ]:  Succeeded snapshot snapshots.snapshot_customers (snapshot) [1 of 15 in 0.00s]
+11:03:13.840783 [debug]: Finished rendering [  0.00s] model gold.fct_orders [success]
+11:03:13.840792 [debug]: Started analyzing model gold.fct_orders
+11:03:13.840797 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_orders at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_orders.sql
+11:03:13.840806 [debug]: Finished rendering [  0.00s] model bronze.bronze_products [success]
+11:03:13.840815 [debug]: Started analyzing model bronze.bronze_products
+11:03:13.840827 [debug]: Finished rendering [  0.00s] model silver.silver_customers [success]
+11:03:13.840797 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_customers at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_customers.sql
+11:03:13.840836 [debug]: Started analyzing model silver.silver_customers
+11:03:13.840840 [debug]: Compiled SQL for node analysis.dbt_databricks_learning.sample_query at target/.lsp/compiled/dbt_databricks_learning/analyses/sample_query.sql
+11:03:13.840849 [debug]: Finished rendering [  0.00s] model gold.mart_customer_daily_summary [success]
+11:03:13.840858 [debug]: Started analyzing model gold.mart_customer_daily_summary
+11:03:13.840857 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_customers at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_customers.sql
+11:03:13.840871 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_orders at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_orders.sql
+11:03:13.840878 [debug]: Finished rendering [  0.00s] model bronze.bronze_customers [success]
+11:03:13.840890 [debug]: Started analyzing model bronze.bronze_customers
+11:03:13.840907 [debug]: Finished rendering [  0.00s] model bronze.bronze_orders [success]
+11:03:13.840917 [debug]: Started analyzing model bronze.bronze_orders
+11:03:13.840944 [debug]: Finished rendering [  0.00s] analysis main.sample_query [success]
+11:03:13.840955 [info ]:  Succeeded analysis main.sample_query (analysis) [5 of 15 in 0.00s]
+11:03:13.840969 [debug]: Finished rendering [  0.00s] model gold.dim_customers [success]
+11:03:13.840982 [debug]: Started analyzing model gold.dim_customers
+11:03:13.841000 [debug]: Finished rendering [  0.00s] model silver.silver_orders [success]
+11:03:13.841008 [info ]: Finished rendering [  0.00s] (15 nodes, 0 skipped, 0 errors)
+11:03:13.841016 [debug]: Started analyzing model silver.silver_orders
+11:03:13.841030 [debug]: Finished analyzing [  0.00s] model gold.fct_orders [success]
+11:03:13.841036 [info ]:  Succeeded model gold.fct_orders (table) [3 of 15 in 0.00s]
+11:03:13.841046 [debug]: Finished analyzing [  0.00s] model bronze.bronze_customers [success]
+11:03:13.841051 [info ]:  Succeeded model bronze.bronze_customers (view) [14 of 15 in 0.00s]
+11:03:13.841061 [debug]: Finished analyzing [  0.00s] model bronze.bronze_products [success]
+11:03:13.841066 [info ]:  Succeeded model bronze.bronze_products (view) [10 of 15 in 0.00s]
+11:03:13.841077 [debug]: Finished analyzing [  0.00s] model silver.silver_products [success]
+11:03:13.841081 [info ]:  Succeeded model silver.silver_products (table) [8 of 15 in 0.00s]
+11:03:13.841257 [debug]: Finished analyzing [  0.00s] model gold.dim_products [success]
+11:03:13.841264 [info ]:  Succeeded model gold.dim_products (table) [4 of 15 in 0.00s]
+11:03:13.841269 [debug]: Finished analyzing [  0.00s] model bronze.bronze_orders [success]
+11:03:13.841271 [info ]:  Succeeded model bronze.bronze_orders (view) [12 of 15 in 0.00s]
+11:03:13.841484 [debug]: Finished analyzing [  0.00s] model silver.silver_customers [success]
+11:03:13.841491 [info ]:  Succeeded model silver.silver_customers (table) [9 of 15 in 0.00s]
+11:03:13.841658 [debug]: Finished analyzing [  0.00s] model gold.mart_customer_daily_summary [success]
+11:03:13.841665 [info ]:  Succeeded model gold.mart_customer_daily_summary (table) [2 of 15 in 0.00s]
+11:03:13.841677 [debug]: Finished analyzing [  0.00s] model gold.dim_customers [success]
+11:03:13.841683 [info ]:  Succeeded model gold.dim_customers (table) [6 of 15 in 0.00s]
+11:03:13.841723 [debug]: Finished analyzing [  0.00s] model silver.silver_orders [success]
+11:03:13.841727 [info ]: Finished analyzing [  0.00s] (11 nodes, 0 skipped, 0 errors)
+11:03:13.841729 [info ]:  Succeeded model silver.silver_orders (table) [7 of 15 in 0.00s]
+11:03:13.843076 [info ]: Started scheduling
+11:03:13.843101 [info ]: Finished scheduling [  0.00s]
+11:03:13.843128 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [39ms]
+Processed: 10 models | 1 snapshot | 3 seeds | 1 analysis
+Summary: 15 total | 15 success
+11:03:13.843160 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-11-07T11:03:22.346854Z | b0b33076-cb43-40c6-9ada-918d71f084ca ====================
+11:03:22.346913 [info ]: Started loading project
+11:03:22.347196 [info ]: Loading profiles.yml
+11:03:22.349682 [info ]: Finished loading project [  0.00s]
+==================== 2026-11-07T11:03:22.350523Z | d27b5d29-b05f-4ff6-99ed-28132e910c5b ====================
+11:03:22.350546 [info ]: Started loading project
+11:03:22.350712 [info ]: Loading profiles.yml
+11:03:22.352375 [debug]:    Started loading packages
+11:03:22.353220 [debug]:     Loaded [  0.00s] packages
+11:03:22.353652 [info ]: Finished loading project [  0.00s]
+11:03:22.353762 [info ]: Started parsing (16 nodes)
+11:03:22.367932 [debug]:    Started building model nodes
+11:03:22.367931 [debug]:    Started building model nodes
+11:03:22.367943 [debug]:   Finished [  0.00s] building model nodes
+11:03:22.367948 [debug]:   Finished [  0.00s] building model nodes
+11:03:22.368080 [debug]: Finished parsing models/bronze/bronze_sources.yml [  0.00s]
+11:03:22.368380 [debug]:    Started resolving data tests
+11:03:22.368382 [debug]:    Started resolving data tests
+11:03:22.368396 [debug]:   Finished [  0.00s] resolving data tests
+11:03:22.368396 [debug]:   Finished [  0.00s] resolving data tests
+11:03:22.368429 [debug]: Finished parsing models/gold/gold_models.yml [  0.00s]
+11:03:22.369262 [debug]: Finished parsing models/silver/silver_models.yml [  0.00s]
+11:03:22.370405 [debug]: Finished parsing snapshots/snapshot_customers.sql [  0.00s]
+11:03:22.371012 [debug]: Finished parsing models/bronze/bronze_customers.sql [  0.00s]
+11:03:22.371206 [debug]: Finished parsing models/bronze/bronze_orders.sql [  0.00s]
+11:03:22.371403 [debug]: Finished parsing models/bronze/bronze_products.sql [  0.00s]
+11:03:22.371689 [debug]: Finished parsing models/gold/dim_customers.sql [  0.00s]
+11:03:22.371950 [debug]: Finished parsing models/gold/dim_products.sql [  0.00s]
+11:03:22.372207 [debug]: Finished parsing models/gold/fct_orders.sql [  0.00s]
+11:03:22.372429 [debug]: Finished parsing models/gold/mart_customer_daily_summary.sql [  0.00s]
+11:03:22.372676 [debug]: Finished parsing models/silver/silver_customers.sql [  0.00s]
+11:03:22.372951 [debug]: Finished parsing models/silver/silver_orders.sql [  0.00s]
+11:03:22.373172 [debug]:    Started building model nodes
+11:03:22.374616 [debug]:   Finished [  0.00s] building model nodes
+11:03:22.374641 [debug]: Finished parsing models/silver/silver_products.sql [  0.00s]
+11:03:22.375062 [debug]:    Started resolving data tests
+11:03:22.375083 [debug]: Finished parsing analyses/sample_query.sql [  0.00s]
+11:03:22.375367 [debug]: Finished parsing tests/assert_order_total_is_positive.sql [  0.00s]
+11:03:22.375370 [debug]:   Finished [  0.00s] resolving data tests
+11:03:22.375514 [debug]:    Started typechecking macros
+11:03:22.425660 [debug]:   Finished [  0.05s] typechecking macros
+11:03:22.426053 [info ]: Finished parsing [  0.07s] (16 nodes, 0 skipped, 0 errors)
+11:03:22.426204 [info ]: Cached model count updated: 10 models (estimate)
+11:03:22.426210 [info ]: Cached model count updated: 10 models (accurate)
+11:03:22.426227 [info ]: Started scheduling
+11:03:22.426248 [info ]: Finished scheduling [  0.00s]
+11:03:22.426251 [debug]: Compilation - 0 nodes selected: {}
+11:03:22.426259 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+11:03:22.426266 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+11:03:22.426275 [info ]: Started scheduling
+11:03:22.426326 [info ]: Finished scheduling [  0.00s]
+11:03:22.427554 [info ]: Started building task graph
+11:03:22.427563 [info ]: Finished building task graph [  0.00s]
+11:03:22.447282 [info ]: Started scheduling
+11:03:22.447317 [info ]: Finished scheduling [  0.00s]
+11:03:22.447379 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'duckdb' [96ms]
+11:03:22.447401 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [100ms]
+11:03:22.447819 [info ]: Cached model count updated: 10 models (accurate)
+11:03:22.763612 [info ]: Loading profiles.yml
+==================== 2026-11-07T11:03:23.629367Z | f2357482-1571-4218-8988-306b7a478359 ====================
+11:03:23.629444 [info ]: Started loading project
+11:03:23.629938 [info ]: Loading profiles.yml
+11:03:23.634055 [info ]: Finished loading project [  0.00s]
+11:03:23.652785 [info ]: Cached model count updated: 10 models (estimate)
+11:03:23.652812 [info ]: Cached model count updated: 10 models (accurate)
+11:03:23.652862 [info ]: Started scheduling
+11:03:23.653011 [info ]: Finished scheduling [  0.00s]
+11:03:23.653030 [debug]: Compilation - 15 nodes selected: {"analysis.dbt_databricks_learning.sample_query", "model.dbt_databricks_learning.bronze_customers", "model.dbt_databricks_learning.bronze_orders", "model.dbt_databricks_learning.bronze_products", "model.dbt_databricks_learning.dim_customers", "model.dbt_databricks_learning.dim_products", "model.dbt_databricks_learning.fct_orders", "model.dbt_databricks_learning.mart_customer_daily_summary", "model.dbt_databricks_learning.silver_customers", "model.dbt_databricks_learning.silver_orders", "model.dbt_databricks_learning.silver_products", "seed.dbt_databricks_learning.raw_customers", "seed.dbt_databricks_learning.raw_orders", "seed.dbt_databricks_learning.raw_products", "snapshot.dbt_databricks_learning.snapshot_customers"}
+11:03:23.654463 [info ]: Started building task graph
+11:03:23.654579 [info ]: Finished building task graph [  0.00s]
+11:03:23.684029 [info ]: Started rendering (15 nodes)
+11:03:23.684043 [info ]: Started snapshot snapshots.snapshot_customers
+11:03:23.684049 [debug]: Started rendering snapshot snapshots.snapshot_customers
+11:03:23.684061 [info ]: Started model gold.mart_customer_daily_summary
+11:03:23.684065 [debug]: Started rendering model gold.mart_customer_daily_summary
+11:03:23.684070 [info ]: Started model gold.fct_orders
+11:03:23.684073 [debug]: Started rendering model gold.fct_orders
+11:03:23.684077 [info ]: Started model gold.dim_products
+11:03:23.684081 [debug]: Started rendering model gold.dim_products
+11:03:23.684087 [info ]: Started analysis main.sample_query
+11:03:23.684090 [debug]: Started rendering analysis main.sample_query
+11:03:23.684094 [info ]: Started model gold.dim_customers
+11:03:23.684097 [debug]: Started rendering model gold.dim_customers
+11:03:23.684102 [info ]: Started model silver.silver_orders
+11:03:23.684105 [debug]: Started rendering model silver.silver_orders
+11:03:23.684110 [info ]: Started model silver.silver_products
+11:03:23.684114 [debug]: Started rendering model silver.silver_products
+11:03:23.684120 [info ]: Started model silver.silver_customers
+11:03:23.684124 [debug]: Started rendering model silver.silver_customers
+11:03:23.684129 [info ]: Started model bronze.bronze_products
+11:03:23.684133 [debug]: Started rendering model bronze.bronze_products
+11:03:23.684140 [info ]: Started seed raw_seed.raw_products
+11:03:23.684144 [debug]: Started rendering seed raw_seed.raw_products
+11:03:23.684150 [info ]: Started model bronze.bronze_orders
+11:03:23.684153 [debug]: Started rendering model bronze.bronze_orders
+11:03:23.684159 [info ]: Started seed raw_seed.raw_orders
+11:03:23.684162 [debug]: Started rendering seed raw_seed.raw_orders
+11:03:23.684170 [info ]: Started model bronze.bronze_customers
+11:03:23.684174 [debug]: Started rendering model bronze.bronze_customers
+11:03:23.684183 [info ]: Started seed raw_seed.raw_customers
+11:03:23.684188 [debug]: Started rendering seed raw_seed.raw_customers
+11:03:23.684202 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_products [success]
+11:03:23.684211 [info ]:  Succeeded seed  raw_seed.raw_products (table) [11 of 15 in 0.00s]
+11:03:23.684224 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_orders [success]
+11:03:23.684230 [info ]:  Succeeded seed  raw_seed.raw_orders (table) [13 of 15 in 0.00s]
+11:03:23.684241 [debug]: Finished rendering [  0.00s] seed raw_seed.raw_customers [success]
+11:03:23.684245 [info ]:  Succeeded seed  raw_seed.raw_customers (table) [15 of 15 in 0.00s]
+11:03:23.684932 [debug]: Compiled SQL for node snapshot.dbt_databricks_learning.snapshot_customers at target/.lsp/compiled/dbt_databricks_learning/snapshots/snapshot_customers.sql/snapshot_customers.sql
+11:03:23.684944 [debug]: Compiled SQL for node analysis.dbt_databricks_learning.sample_query at target/.lsp/compiled/dbt_databricks_learning/analyses/sample_query.sql
+11:03:23.684974 [debug]: Compiled SQL for node model.dbt_databricks_learning.mart_customer_daily_summary at target/.lsp/compiled/dbt_databricks_learning/models/gold/mart_customer_daily_summary.sql
+11:03:23.685002 [debug]: Finished rendering [  0.00s] snapshot snapshots.snapshot_customers [success]
+11:03:23.685034 [info ]: Started analyzing (11 nodes)
+11:03:23.685043 [debug]: Started analyzing snapshot snapshots.snapshot_customers
+11:03:23.685063 [debug]: Finished rendering [  0.00s] analysis main.sample_query [success]
+11:03:23.685075 [info ]:  Succeeded analysis main.sample_query (analysis) [5 of 15 in 0.00s]
+11:03:23.685095 [debug]: Finished rendering [  0.00s] model gold.mart_customer_daily_summary [success]
+11:03:23.685105 [debug]: Started analyzing model gold.mart_customer_daily_summary
+11:03:23.685135 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_products at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_products.sql
+11:03:23.685191 [debug]: Finished rendering [  0.00s] model gold.dim_products [success]
+11:03:23.685209 [debug]: Started analyzing model gold.dim_products
+11:03:23.685228 [debug]: Finished analyzing [  0.00s] snapshot snapshots.snapshot_customers [success]
+11:03:23.685238 [info ]:  Succeeded snapshot snapshots.snapshot_customers (snapshot) [1 of 15 in 0.00s]
+11:03:23.685339 [debug]: Compiled SQL for node model.dbt_databricks_learning.dim_customers at target/.lsp/compiled/dbt_databricks_learning/models/gold/dim_customers.sql
+11:03:23.685375 [debug]: Finished rendering [  0.00s] model gold.dim_customers [success]
+11:03:23.685386 [debug]: Started analyzing model gold.dim_customers
+11:03:23.685591 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_customers at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_customers.sql
+11:03:23.685636 [debug]: Finished rendering [  0.00s] model silver.silver_customers [success]
+11:03:23.685656 [debug]: Started analyzing model silver.silver_customers
+11:03:23.685724 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_orders at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_orders.sql
+11:03:23.685772 [debug]: Finished rendering [  0.00s] model silver.silver_orders [success]
+11:03:23.685779 [debug]: Compiled SQL for node model.dbt_databricks_learning.fct_orders at target/.lsp/compiled/dbt_databricks_learning/models/gold/fct_orders.sql
+11:03:23.685780 [debug]: Started analyzing model silver.silver_orders
+11:03:23.685812 [debug]: Compiled SQL for node model.dbt_databricks_learning.silver_products at target/.lsp/compiled/dbt_databricks_learning/models/silver/silver_products.sql
+11:03:23.685855 [debug]: Finished rendering [  0.00s] model gold.fct_orders [success]
+11:03:23.685860 [debug]: Started analyzing model gold.fct_orders
+11:03:23.685928 [debug]: Finished analyzing [  0.00s] model gold.fct_orders [success]
+11:03:23.685932 [info ]:  Succeeded model gold.fct_orders (table) [3 of 15 in 0.00s]
+11:03:23.686077 [debug]: Finished rendering [  0.00s] model silver.silver_products [success]
+11:03:23.686114 [debug]: Started analyzing model silver.silver_products
+11:03:23.686115 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_orders at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_orders.sql
+11:03:23.686151 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_customers at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_customers.sql
+11:03:23.686198 [debug]: Finished rendering [  0.00s] model bronze.bronze_orders [success]
+11:03:23.686204 [debug]: Started analyzing model bronze.bronze_orders
+11:03:23.686226 [debug]: Finished rendering [  0.00s] model bronze.bronze_customers [success]
+11:03:23.686240 [debug]: Started analyzing model bronze.bronze_customers
+11:03:23.686297 [debug]: Finished analyzing [  0.00s] model gold.dim_products [success]
+11:03:23.686305 [info ]:  Succeeded model gold.dim_products (table) [4 of 15 in 0.00s]
+11:03:23.686320 [debug]: Finished analyzing [  0.00s] model gold.mart_customer_daily_summary [success]
+11:03:23.686326 [info ]:  Succeeded model gold.mart_customer_daily_summary (table) [2 of 15 in 0.00s]
+11:03:23.686343 [debug]: Finished analyzing [  0.00s] model silver.silver_products [success]
+11:03:23.686350 [info ]:  Succeeded model silver.silver_products (table) [8 of 15 in 0.00s]
+11:03:23.686363 [debug]: Finished analyzing [  0.00s] model gold.dim_customers [success]
+11:03:23.686373 [info ]:  Succeeded model gold.dim_customers (table) [6 of 15 in 0.00s]
+11:03:23.686384 [debug]: Finished analyzing [  0.00s] model bronze.bronze_customers [success]
+11:03:23.686389 [info ]:  Succeeded model bronze.bronze_customers (view) [14 of 15 in 0.00s]
+11:03:23.686472 [debug]: Finished analyzing [  0.00s] model silver.silver_orders [success]
+11:03:23.686480 [info ]:  Succeeded model silver.silver_orders (table) [7 of 15 in 0.00s]
+11:03:23.686482 [debug]: Compiled SQL for node model.dbt_databricks_learning.bronze_products at target/.lsp/compiled/dbt_databricks_learning/models/bronze/bronze_products.sql
+11:03:23.686515 [debug]: Finished rendering [  0.00s] model bronze.bronze_products [success]
+11:03:23.686519 [info ]: Finished rendering [  0.00s] (15 nodes, 0 skipped, 0 errors)
+11:03:23.686524 [debug]: Started analyzing model bronze.bronze_products
+11:03:23.686530 [debug]: Finished analyzing [  0.00s] model silver.silver_customers [success]
+11:03:23.686534 [info ]:  Succeeded model silver.silver_customers (table) [9 of 15 in 0.00s]
+11:03:23.686577 [debug]: Finished analyzing [  0.00s] model bronze.bronze_orders [success]
+11:03:23.686582 [info ]:  Succeeded model bronze.bronze_orders (view) [12 of 15 in 0.00s]
+11:03:23.686588 [debug]: Finished analyzing [  0.00s] model bronze.bronze_products [success]
+11:03:23.686591 [info ]: Finished analyzing [  0.00s] (11 nodes, 0 skipped, 0 errors)
+11:03:23.686593 [info ]:  Succeeded model bronze.bronze_products (view) [10 of 15 in 0.00s]
+11:03:23.688038 [info ]: Started scheduling
+11:03:23.688064 [info ]: Finished scheduling [  0.00s]
+11:03:23.688093 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'duckdb' [58ms]
+Processed: 10 models | 1 snapshot | 3 seeds | 1 analysis
+Summary: 15 total | 15 success
+11:03:23.688129 [info ]: Cached model count updated: 10 models (accurate)
+11:23:16.050177 [debug]: Ignoring unsupported LSP notification
+==================== 2026-11-07T11:23:21.780566Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-11-07T11:23:21.780637Z | 6f1a5cc4-8a2d-4abd-9b2d-ee14532919d9 ====================
+11:23:21.780646 [info ]: Starting dbt LSP server
+11:23:21.780657 [info ]: Connecting to LSP client on port 8000
+11:23:21.780803 [info ]: Successfully connected to LSP client
+11:23:21.780811 [info ]: Creating LSP service...
+11:23:21.781412 [info ]: Creating LSP server...
+11:23:21.781417 [info ]: Starting LSP server...
+11:23:22.675330 [info ]: Loading profiles.yml
+11:23:46.290954 [debug]: Ignoring unsupported LSP notification

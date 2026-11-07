@@ -1,0 +1,16 @@
+version: 2
+
+# We reference the seed tables as raw sources
+# In a cloud production environment (Databricks/Snowflake/BigQuery),
+# this would point to the raw landing tables or external storage files.
+sources:
+  - name: raw_data
+    schema: raw_seed
+    tables:
+      - name: raw_customers
+        description: "Raw customer registration dump"
+      - name: raw_products
+        description: "Raw product inventory catalog"
+      - name: raw_orders
+        description: "Raw transactions from e-commerce checkout"
+

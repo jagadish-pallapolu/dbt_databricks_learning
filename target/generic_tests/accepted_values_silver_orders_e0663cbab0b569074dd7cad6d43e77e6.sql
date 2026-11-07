@@ -1,0 +1,1 @@
+{{ test_accepted_values(column_name="status", model=get_where_subquery(ref('silver_orders')), values=["completed","shipped","cancelled","returned"]) }}

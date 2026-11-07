@@ -1,0 +1,41 @@
+name: 'dbt_databricks_learning'
+version: '1.0.0'
+config-version: 2
+
+# Profile name matching profiles.yml
+profile: 'learning_dwh'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+  - "*.duckdb"
+
+# Model configurations mirroring Databricks Medallion Architecture
+models:
+  dbt_databricks_learning:
+    # Bronze Layer: Ingest raw sources, lightweight schema casting, fast load
+    bronze:
+      +materialized: view
+      +schema: bronze
+
+    # Silver Layer: Cleaned, conformant, deduplicated data (often incremental or table in Databricks)
+    silver:
+      +materialized: table
+      +schema: silver
+
+    # Gold Layer: Star Schema / Dimensional models & aggregates for BI and reporting
+    gold:
+      +materialized: table
+      +schema: gold
+
+seeds:
+  dbt_databricks_learning:
+    +schema: raw_seed
+

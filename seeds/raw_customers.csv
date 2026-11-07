@@ -1,0 +1,7 @@
+customer_id,first_name,last_name,email,country,signup_date,status
+101,Alice,Smith,alice.smith@example.com,USA,2024-01-10,active
+102,Bob,Jones,bob.jones@example.com,CAN,2024-01-15,active
+103,Charlie,Brown,charlie.brown@example.com,USA,2024-02-01,inactive
+104,Diana,Prince,diana.prince@example.com,UK,2024-02-20,active
+105,Evan,Wright,evan.wright@example.com,USA,2024-03-05,pending
+106,Fiona,Gallagher,fiona.g@example.com,AUS,2024-03-12,active
